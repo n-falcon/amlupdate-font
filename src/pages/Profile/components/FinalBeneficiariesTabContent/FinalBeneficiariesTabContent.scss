@@ -1,0 +1,11 @@
+.final-beneficiaries {
+  padding: 15px;
+
+  .name, .type {
+    text-transform: capitalize;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+}

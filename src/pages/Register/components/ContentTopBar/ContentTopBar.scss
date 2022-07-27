@@ -1,0 +1,459 @@
+.register-new {
+  .content-top-bar {
+    background: rgba(255, 255, 255, .1);
+    border-bottom: 1px rgba(0, 0, 0, .15) solid;
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, .1);
+    height: 163px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    -webkit-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, .1);
+
+    .cake-wrapper {
+      background: rgba(255, 255, 255, .5);
+      border-right: 1px rgba(0, 0, 0, .1) solid;
+      float: left;
+      height: 163px;
+      position: relative;
+      width: 150px;
+      z-index: 2;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: #fff;
+        border-right: 0;
+        margin-top: -10px;
+        margin-right: -10px;
+        z-index: 1000;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: rgba(0,0,0, .13);
+        border-right: 0;
+        margin-top: -10px;
+        margin-right: -11px;
+        z-index: 1;
+      }
+
+      .cake {
+        left: 11px;
+        position: relative;
+        top: 20px;
+      }
+    }
+
+    .risk-levels-wrapper {
+      float: left;
+      height: 162px;
+      padding: 0;
+      position: relative;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          $color-active: rgba(0, 0, 0, .02);
+          $color-inactive: rgba(0, 0, 0, .07);
+
+          border-right: 1px rgba(0, 0, 0, .1) solid;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          float: left;
+          height: 163px;
+          position: relative;
+          text-align: center;
+          width: 125px;
+
+          .ant-switch {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+          }
+
+          .percent, .percent-locked {
+            color: rgba(0, 0, 0, .6);
+            font-size: 1em;
+            left: 11px;
+            position: absolute;
+            top: 8px;
+          }
+
+          .percent-locked {
+            color: rgba(0, 0, 0, .3);
+          }
+
+          .risk-level-inner {
+            position: relative;
+            top: 10px;
+
+            .circle {
+              border-radius: 40px;
+              box-shadow: 0px 4px 1px 0px rgba(0,0,0,0.05);
+              font-size: 1.1em;
+              font-weight: bold;
+              height: 80px;
+              line-height: 80px;
+              margin: 0 auto 5px;
+              text-align: center;
+              width: 80px;
+              -moz-box-shadow: 0px 4px 1px 0px rgba(0,0,0,0.05);
+              -webkit-box-shadow: 0px 4px 1px 0px rgba(0,0,0,0.05);
+            }
+          }
+
+          &.is-not-checked {
+            -webkit-box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, .07);
+            -moz-box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, .07);
+            box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, .07);
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-name: darker-background-color;
+
+            @keyframes darker-background-color {
+              from {
+                background-color: $color-active;
+              }
+
+              to {
+                background-color: $color-inactive;
+              }
+            }
+
+            .percent {
+              animation-duration: 0.5s;
+              animation-fill-mode: forwards;
+              animation-name: percent-fade-out;
+
+              @keyframes percent-fade-out {
+                from {
+                  opacity: 1;
+                }
+
+                to {
+                  opacity: 0;
+                }
+              }
+            }
+
+            .percent-locked {
+              animation-duration: 1s;
+              animation-fill-mode: forwards;
+              animation-name: percent-locked-fade-in;
+
+              @keyframes percent-locked-fade-in {
+                from {
+                  opacity: 0;
+                }
+
+                to {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .circle,
+            .risk-level-name {
+              animation-duration: 0.5s;
+              animation-fill-mode: forwards;
+              animation-name: fade-out-childs;
+
+              @keyframes fade-out-childs {
+                from {
+                  opacity: 1;
+                }
+
+                to {
+                  opacity: 0.6;
+                }
+              }
+            }
+          }
+
+          &.is-checked {
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-name: lighter-background-color;
+            position: relative;
+
+            @keyframes lighter-background-color {
+              from {
+                background-color: $color-inactive;
+              }
+
+              to {
+                background-color: $color-active;
+              }
+            }
+
+            .percent {
+              animation-duration: 0.5s;
+              animation-fill-mode: forwards;
+              animation-name: percent-fade-in;
+
+              @keyframes percent-fade-in {
+                from {
+                  opacity: 0;
+                }
+
+                to {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .percent-locked {
+              animation-duration: 1s;
+              animation-fill-mode: forwards;
+              animation-name: percent-locked-fade-out;
+
+              @keyframes percent-locked-fade-out {
+                from {
+                  opacity: 1;
+                }
+
+                to {
+                  opacity: 0;
+                }
+              }
+            }
+
+            .circle,
+            .risk-level-name {
+              animation-duration: 0.5s;
+              animation-fill-mode: forwards;
+              animation-name: fade-in-childs;
+
+              @keyframes fade-in-childs {
+                from {
+                  opacity: 0.6;
+                }
+
+                to {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      } /**/
+    }
+  }
+}
+
+/*
+.register-new {
+  .content-top-bar {
+    background: rgba(255, 255, 255, .1);
+    border-bottom: 1px rgba(0, 0, 0, .15) solid;
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, .1);
+    height: 163px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    -webkit-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, .1);
+
+    .cake-wrapper {
+      background: rgba(255, 255, 255, .5);
+      border-right: 1px rgba(0, 0, 0, .1) solid;
+      float: left;
+      height: 163px;
+      position: relative;
+      width: 150px;
+      z-index: 2;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: #fff;
+        border-right: 0;
+        margin-top: -10px;
+        margin-right: -10px;
+        z-index: 1000;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: rgba(0,0,0, .13);
+        border-right: 0;
+        margin-top: -10px;
+        margin-right: -11px;
+        z-index: 1;
+      }
+
+      .cake {
+        left: 11px;
+        position: relative;
+        top: 20px;
+      }
+    }
+
+    .risk-levels-wrapper {
+      background: rgba(0, 0, 0, .05);
+      float: left;
+      height: 162px;
+      padding: 0;
+      position: relative;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          border-right: 1px rgba(0, 0, 0, .1) solid;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          float: left;
+          height: 163px;
+          position: relative;
+          text-align: center;
+          width: 150px;
+
+          &.is-checked {
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-name: check-color;
+
+            @keyframes check-color {
+              from {
+                background-color: rgba(255, 255, 255, .0);
+              }
+
+              to {
+                background-color: rgba(255, 255, 255, .5);
+              }
+            }
+
+            .risk-level-inner {
+              .circle {
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+                animation-name: fade-out-circle;
+
+                @keyframes fade-out-circle {
+                  from {
+                    opacity: 0.5;
+                  }
+
+                  to {
+                    opacity: 1;
+                  }
+                }
+              }
+
+              span {
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+                animation-name: fade-out-name;
+
+                @keyframes fade-out-name {
+                  from {
+                    opacity: 0.5;
+                  }
+
+                  to {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+
+          &.is-not-checked {
+            animation-duration: 0.5;
+            animation-fill-mode: forwards;
+            animation-name: fade-out-not-checked;
+
+            @keyframes fade-out-not-checked {
+              from {
+                opacity: 1;
+              }
+
+              to {
+                opacity: 0.5;
+              }
+            }
+          }
+
+          .risk-level-inner {
+            position: relative;
+            top: 10px;
+
+            .percent {
+              opacity: 0.5;
+            }
+
+            .circle {
+              border-radius: 40px;
+              font-size: 1.1em;
+              font-weight: bold;
+              height: 80px;
+              line-height: 80px;
+              margin: 0 auto 5px;
+              opacity: 0.5;
+              text-align: center;
+              width: 80px;
+            }
+
+            span {
+              opacity: 0.5;
+            }
+          }
+
+          .ant-switch {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+          }
+
+          .percent {
+            color: rgba(0, 0, 0, .6);
+            font-size: 1em;
+            left: 11px;
+            position: absolute;
+            top: 8px;
+          }
+
+          &:first-child {
+            border-left: 0;
+          }
+
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+*/

@@ -1,0 +1,97 @@
+.suspicious-operation-block {
+  .block-content {
+    .block-content-inner {
+      padding: 7px 10px;
+
+      .item {
+        border: 1px rgba(0, 0, 0, .3) solid;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 7px;
+
+        label.column-name {
+          background: rgba(0, 0, 0, .3);
+          border-bottom: 1px rgba(0, 0, 0, .1) solid;
+          border-radius: 5px;
+          color: white;
+          margin: 0 0 10px;
+          padding: 3px 8px;
+        }
+
+        .col-inner {
+          padding: 5px 5px 0;
+        }
+
+        .radios {
+          padding: 0 0 5px;
+        }
+
+        .dates {
+          padding: 0 0 5px;
+        }
+
+        .textarea {
+          textarea {
+            height: 111px;
+            width: 100%;
+          }
+        }
+
+        .ant-col {
+          padding: 0;
+        }
+
+        .date-child-block {
+          background-color: rgba(255, 255, 255, .9);
+          border: 1px rgba(0, 0, 0, .2) solid;
+          border-radius: 10px;
+          padding: 10px;
+          position: relative;
+          margin: 10px 0;
+
+          img {
+            height: 32px;
+            opacity: 0.4;
+          }
+
+          small {
+            margin-left: 40px;
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .save-button {
+    background: green !important;
+    border: 0 !important;
+    margin-left: 20px;
+  }
+
+  .request-ros {
+    background: rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    border-bottom: 2px rgba(0, 0, 0, .2) solid;
+    color: rgba(0, 0, 0, .5);
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    position: relative;
+    text-indent: 15px;
+    margin-bottom: 10px;
+
+    .ant-btn {
+      position: absolute;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      height: 50px;
+      right: 0;
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.person-info {
+  .basic-info-title {
+    background: rgba(0, 0, 0, .05);
+    font-size: 1em;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding: 10px 15px;
+  }
+
+  .basic-info {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px 0;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0;
+      text-indent: 15px;
+    }
+
+    .ant-row {
+      border-bottom: 1px rgba(0, 0, 0, .1) solid;
+      margin-bottom: 13px;
+
+      .ant-col {
+        min-height: 60px;
+        padding-right: 20px;
+        text-indent: 15px;
+      }
+    }
+  }
+
+  .images {
+    img {
+      float: left;
+    }
+  }
+
+  img.img-clasif {
+    padding-right: 5px;
+  }
+
+  p.script {
+      margin-bottom: 5px;
+  }
+
+  td.break-line {
+    word-break: break-all;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .country-item {
+    margin-bottom: 10px;
+  }
+  p.dj-country {
+    margin-bottom: 6px;
+
+    &.dj-country-GAFIHIGH {
+    	color: #f00;
+    }
+
+    &.dj-country-GAFILOW {
+    	color: #00f;
+    }
+
+    &.dj-country-OECD {
+    	color: #0f0;
+    }
+  }
+
+
+  p.dj-country-SII {
+  	color: #F87D1A;
+  }
+
+  .ant-table-small {
+    border: 0;
+    margin: 10px 0;
+  }
+
+  .watchlist, .names {
+    padding: 15px;
+
+    table {
+      th, div {
+        border-bottom: 1px rgba(0, 0, 0, .1) solid !important;
+        padding: 10px 0 !important;
+      }
+
+      td {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .ant-descriptions-item-label {
+    background: rgba(0, 0, 0, .05);
+    //mix-blend-mode: multiply;
+  }
+}

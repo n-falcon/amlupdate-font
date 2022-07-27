@@ -1,0 +1,19 @@
+import AdverseMediaAndVipTabContentComponent from './AdverseMediaAndVipTabContent/AdverseMediaAndVipTabContent'
+import ControllersTabContentComponent from './ControllersTabContent/ControllersTabContent'
+import FinalBeneficiariesTabContentComponent from './FinalBeneficiariesTabContent/FinalBeneficiariesTabContent'
+import InfoTabContentComponent from './InfoTabContent/InfoTabContent'
+import OwnershipTreeTabContentComponent from './OwnershipTreeTabContent/OwnershipTreeTabContent'
+import PartnershipsPresenceTabContentComponent from './PartnershipsPresenceTabContent/PartnershipsPresenceTabContent'
+import PepAndSanctionsTabContentComponent from './PepAndSanctionsTabContent/PepAndSanctionsTabContent'
+import PersonInfoTabContentComponent from './PersonInfoTabContent/PersonInfoTabContent'
+import QuerySearchBoxComponent from './QuerySearchBox/QuerySearchBox'
+
+export const AdverseMediaAndVipTabContent = AdverseMediaAndVipTabContentComponent
+export const ControllersTabContent = ControllersTabContentComponent
+export const FinalBeneficiariesTabContent = FinalBeneficiariesTabContentComponent
+export const InfoTabContent = InfoTabContentComponent
+export const OwnershipTreeTabContent = OwnershipTreeTabContentComponent
+export const PartnershipsPresenceTabContent = PartnershipsPresenceTabContentComponent
+export const PepAndSanctionsTabContent = PepAndSanctionsTabContentComponent
+export const PersonInfoTabContent = PersonInfoTabContentComponent
+export const QuerySearchBox = QuerySearchBoxComponent

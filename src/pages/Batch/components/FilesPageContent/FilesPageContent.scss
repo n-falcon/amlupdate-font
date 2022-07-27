@@ -1,0 +1,19 @@
+.files-page-content {
+  background-color: rgba(255, 255, 255, .5);
+  min-height: 500px;
+
+  .files-page-content-inner {
+    min-height: 750px;
+    overflow: hidden;
+    padding: 40px 0 0 35px;
+    position: relative;
+
+    .ant-spin {
+      left: 50%;
+      margin-left: -10px;
+      margin-top: -30px;
+      position: absolute;
+      top: 50%;
+    }
+  }
+}

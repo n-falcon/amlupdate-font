@@ -1,0 +1,190 @@
+.modal-add-batch-file {
+  -webkit-box-shadow: 0px 0px 43px 17px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 43px 17px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 43px 17px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+
+  .ant-modal-close-x {
+    color: white;
+  }
+
+  .ant-modal-body {
+    padding: 0;
+
+    .modal-add-batch-file-content {
+      div.plantilla {
+          float: right;
+          padding: 10px;
+      }
+
+      background: #444;
+
+      .ant-upload {
+        background: none;
+        border: 0;
+        padding: 0;
+
+        .ant-upload-drag-container {
+          background: #666;
+          padding: 10px;
+          height: 150px !important;
+
+          img {
+            height: 100px;
+            margin-bottom: 20px;
+          }
+
+          h3 {
+            color: rgba(255, 255, 255, .5);
+          }
+
+          &:hover {
+            background: #555;
+          }
+        }
+      }
+
+      .params {
+        color: rgba(255, 255, 255, .5);
+        padding: 0 10px;
+
+        .col-inner {
+          padding: 15px 10px 20px;
+
+          &:first-child {
+            padding-left: 20px;
+            padding-right: 10px !important;
+          }
+
+          &:last-child {
+            padding-left: 10px !important;
+            padding-right: 20px;
+          }
+
+          label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .ant-select {
+            width: 100%;
+          }
+
+          .block-database {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .tmp-files-list {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 250px;
+
+    .spinner {
+      color: white;
+      left: 20px;
+      position: absolute;
+      top: 15px;
+
+      span {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-name: status-fade-in;
+
+        @keyframes status-fade-in {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    .image-wrapper {
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-name: file-image-fade-in;
+      height: 130px;
+      position: relative;
+      width: 103px;
+
+      &.is-uploading {
+        animation-duration: 0.01;
+        animation-fill-mode: forwards;
+        animation-name: add-transparency;
+        opacity: 0.5 !important;
+
+        @keyframes add-transparency {
+          from {
+            opacity: 1;
+          }
+
+          to {
+            opacity: 0.3;
+          }
+        }
+      }
+
+      @keyframes file-image-fade-in {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      img {
+        display: block;
+        height: 130px;
+        margin-bottom: 15px;
+      }
+
+      .remove {
+        box-shadow: 0px 5px 1px 0px rgba(0,0,0,0.1);
+        background: red;
+        border-radius: 15px;
+        color: white;
+        cursor: pointer;
+        height: 30px;
+        left: -15px;
+        line-height: 30px;
+        position: absolute;
+        text-align: center;
+        top: -15px;
+        width: 30px;
+        -moz-box-shadow: 0px 5px 1px 0px rgba(0,0,0,.1);
+        -webkit-box-shadow: 0px 5px 1px 0px rgba(0,0,0,.1);
+
+      }
+    }
+  }
+
+  .file-name {
+    color: white;
+    font-size: 2em;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 200px;
+    width: 100%;
+  }
+
+  .col-inner.save {
+    padding-top: 0 !important;
+
+    button#save {
+      width: 100%;
+    }
+  }
+}

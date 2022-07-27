@@ -1,0 +1,28 @@
+.navigation {
+  background: transparent;
+  float: right;
+
+  ul {
+    line-height: 50px !important;
+
+    .ant-menu-item {
+      font-size: 0.9em !important;
+      height: 50px !important;
+    }
+  }
+
+.ant-menu-horizontal {
+  border-bottom: 0;
+}
+
+.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu {
+  border-bottom: 0;
+  position: relative;
+  top: 0;
+  vertical-align: top;
+}
+
+  .anticon {
+    margin-right: 6px !important;
+  }
+}

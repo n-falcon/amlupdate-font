@@ -1,0 +1,318 @@
+.file {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: file-fade-in;
+  border-radius: 10px;
+  float: left;
+  height: 210px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 170px;
+
+  @keyframes file-fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  // ####################################
+  // Upper area
+  // ####################################
+
+  .upper {
+    background: rgba(0, 0, 0, .2);
+    background-size: 100% 100%;
+    height: 170px;
+    position: relative;
+
+    .status-bar {
+      color: white;
+      height: 30px;
+      line-height: 33px;
+      left: 0;
+      position: absolute;
+      text-indent: 12px;
+      top: 0;
+      width: 100%;
+
+      .anticon {
+        color: white;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+
+      .status-string {
+        left: 12px;
+        position: relative;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        top: 0;
+      }
+    }
+
+    .text-file-icon {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 170px;
+
+      img {
+        height: 95px;
+        margin-left: 17px;
+        margin-top: 20px;
+      }
+    }
+
+    .progress-overlay {
+      display: none;
+    }
+
+    .buttons-overlay, .black-overlay {
+      height: 170px;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 170px;
+    }
+
+    .buttons-overlay {
+      align-items: center;
+      display: none;
+      justify-content: center;
+      z-index: 10;
+
+      .ant-btn {
+        background-color: green !important;
+        border: 1px rgba(255, 255, 255, .3) solid !important;
+        display: block;
+        margin-bottom: 10px;
+        width: 150px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .black-overlay {
+      background-color: black;
+      z-index: 9;
+    }
+  }
+
+  &.queued, &.in-process {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    .text-file-icon {
+      opacity: 0.45;
+    }
+  }
+
+  &.in-process {
+    .progress-overlay {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      .ant-progress {
+        margin-left: -5px;
+
+        .ant-progress-inner {
+          background: rgba(0, 0, 0, .5);
+          height: 60px !important;
+          position: relative;
+          top: 10px !important;
+          width: 60px !important;
+
+          .ant-progress-circle {
+            border-color: green !important  ;
+          }
+
+          .ant-progress-text {
+            color: white !important;
+            font-size: 0.5em;
+            text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+          }
+        }
+      }
+
+      .stop-overlay {
+        background: #666;
+        border-radius: 25px;
+        color: #fff;
+        cursor: pointer;
+        height: 50px;
+        left: 57px;
+        line-height: 50px;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        top: 70px;
+        z-index: 10;
+        width: 50px;
+
+        .anticon {
+          display: none;
+          position: relative;
+          top: 18px;
+        }
+
+        &:hover {
+          animation-duration: 0.75s;
+          animation-fill-mode: forwards;
+          animation-name: cancel-icon-fade-in;
+
+          @keyframes cancel-icon-fade-in {
+            to {
+              opacity: 1;
+            }
+          }
+
+          .anticon {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .stop-overlay:hover {
+
+    }
+  }
+
+  &.ready, &.downloaded {
+    .upper:hover {
+      .buttons-overlay {
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-name: buttons-overlay-slide-down;
+        display: flex;
+
+        @keyframes buttons-overlay-slide-down {
+          from {
+            opacity: 0;
+            top: -170px;
+          }
+
+          to {
+            opacity: 1;
+            top: 0;
+          }
+        }
+      }
+
+      .black-overlay {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-name: black-overlay-fade-in;
+
+        @keyframes black-overlay-fade-in {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  &.downloaded {
+    .downloaded-sticker {
+      background: rgba(0, 0, 0, .3);
+      display: none;
+      height: 150px;
+      left: 20px;
+      position: absolute;
+      top: -50px;
+      transform: rotateY(0deg) rotate(45deg);
+      width: 30px;
+      display: block !important;
+    }
+
+    .status-string {
+      color: white;
+      display: block;
+      font-size: 0.9em;
+      left: -15px !important;
+      padding: 0 !important;
+      position: absolute !important;
+      transform: rotateY(0deg) rotate(-45deg);
+      top: 18px !important;
+      z-index: 2;
+    }
+  }
+
+  // ####################################
+  // Lower area
+  // ####################################
+
+  .lower {
+    position: relative;
+
+    .file-name {
+      background: rgba(0, 0, 0, .5);
+      color: white;
+
+      .file-name-inner {
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        white-space: nowrap;
+        width: 150px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .lower:hover {
+
+  }
+
+  &.queued {
+    .white-overlay {
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      animation-name: whiteFadeOut;
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+
+      @keyframes whiteFadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

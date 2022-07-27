@@ -1,0 +1,80 @@
+#inicio {
+  #header {
+    .navigation li#home-button {
+      background-color: #1890ff;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+
+  .home {
+    h3.references-title {
+      border-bottom: 1px rgba(0, 0, 0, .2) solid;
+      color: rgba(0, 0, 0, .5);
+      margin: 0 0 20px 0px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .timeline-alerta {
+    cursor: pointer;
+  }
+
+  .timeline-item-monitor {
+    margin-bottom: 1px;
+    padding: 0px 15px 15px;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
+    position: relative;
+    top: -2px;
+    height: 47px;
+    border-bottom: 1px rgba(0,0,0,.3) solid;
+
+
+    ul.colors {
+      float: right;
+      list-style: none;
+      padding: 0;
+      position: relative;
+      top: -3px;
+
+      li {
+        border-radius: 5px;
+        float: left !important;
+        height: 32px !important;
+        line-height: 32px;
+        margin-right: 10px;
+        text-align: center;
+        width: 37px !important;
+        -webkit-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.06);
+        -moz-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.06);
+        box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.06);
+        font-size: 11px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .ant-badge {
+        -webkit-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.06);
+        -moz-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.06);
+        box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.06);
+      }
+    }
+
+    h3 {
+      float: left;
+      margin: 0;
+      padding-right: 10px;
+    }
+  }
+  img.news {
+    width: 100%;
+    margin-top: 6px;
+    padding-right: 10px;
+  }
+}
