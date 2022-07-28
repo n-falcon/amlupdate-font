@@ -1,8 +1,8 @@
 
 import React,{useState} from 'react'
 import moment from 'moment'
-import { Row, Col, Button, Select, message, Spin, Modal, Divider } from 'antd'
-//import { sendBdRequestPromise } from '../../../OnBoarding/promises'
+import { Row, Col, Button, Select, message, Spin, Modal, Divider, notification} from 'antd'
+import { sendBdRequestPromise } from '../../../OnBoarding/promises'
 import { useTranslation } from 'react-i18next'
 
 const ModalRequestOpt = ({type, recipients, category, handleCancel}) => {
@@ -87,7 +87,7 @@ const ModalRequestOpt = ({type, recipients, category, handleCancel}) => {
   const handleSendRequest = () => {
     setIsLoading(true)
     if (type === 'cronForm' || type === 'newRequest') {
-      /*
+
       sendBdRequestPromise({period, type, category, recipients: recipients.map((recipient) => recipient.id)}).then(results => {
           setIsLoading(false)
         if(results.status === 'OK' && recipients.length > 0) {
@@ -103,7 +103,7 @@ const ModalRequestOpt = ({type, recipients, category, handleCancel}) => {
             description: recipients.length === 0 ? "Debe seleccionar destinatarios" : results.message
           })
         }
-      })*/
+      })
     }else if (type === 'brokeRegister'){
 
     }else if (type === 'uboFinder'){

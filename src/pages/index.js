@@ -20,6 +20,7 @@ import NotFound from './NotFound/NotFound'
 import NotAuthorized from './NotAuthorized/NotAuthorized'
 import Query from './Query/Query'
 import Profile from './Profile/Profile'
+import OnBoarding from './OnBoarding/OnBoarding'
 
 
 export const LoginPage = Login
@@ -30,6 +31,8 @@ export const RegisterPage = Register
 export const NewRegisterPage = NewRegister
 export const QueryPage = Query
 export const ProfilePage = Profile
+export const OnBoardingPage = OnBoarding
+
 
 /*
 
@@ -38,13 +41,11 @@ export const Query2Page = Query2
 
 import Monitoring from './Monitoring/Monitoring'
 import Profile from './Profile/Profile'
-
 import Quiebras from './Quiebras/Quiebras'
 import Stakeholder from './Stakeholder/Stakeholder'
 import StakePublicComponent from './Stakeholder/Public'
 import StakePrivateComponent from './Stakeholder/Private'
 import AdminLogBases from './AdminLogBases/AdminLogBases'
-import OnBoarding from './OnBoarding/OnBoarding'
 
 export const AdminPage = Admin
 export const AdminAuditPage = AdminAudit
@@ -64,5 +65,4 @@ export const StakeholderPage = Stakeholder
 export const StakePublic = StakePublicComponent
 export const StakePrivate = StakePrivateComponent
 export const AdminLogBasesPage = AdminLogBases
-export const OnBoardingPage = OnBoarding
  */

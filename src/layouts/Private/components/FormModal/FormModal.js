@@ -33,16 +33,16 @@ const FormModal = ({client, currentUser, typeForm, modalReady, showForm, form })
         if(showForm) {
             //todo:ajustar
             //if(form) {
-            if(true) {
+
                 openForm(form.id)
            /* }else {
                 getFormDeclarationPromise(currentUser.id, typeForm).then((form) => {
                     openForm(form.data)
                 }).catch(err => console.log(err));
             }
-
-            */
         }
+            */
+
         }
 		//si el id es distinto de 1 hago el windows open y si no depende de la ruta se monta el componente
 		// console.log(pathUrl + form.data);

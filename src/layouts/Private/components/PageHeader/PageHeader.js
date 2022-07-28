@@ -3,7 +3,7 @@ import React from 'react'
 import { Icon, Button } from 'antd'
 import { useTranslation } from 'react-i18next'
 
-export default ({ children, description, title, icon, hasAdvice, formAction }) => {
+const PageHeader = ({ children, description, title, icon, hasAdvice, formAction }) => {
   const {t} = useTranslation();
 
  return (
@@ -31,3 +31,5 @@ export default ({ children, description, title, icon, hasAdvice, formAction }) =
 )
   
 }
+
+export default PageHeader

@@ -17,6 +17,7 @@ import ga from './ga'
 const { Dragger } = Upload
 
 class Register extends Component {
+
   state = {
     breadcrumbs: this.getBreadcrumbs(),
     clients: [],
@@ -50,8 +51,6 @@ class Register extends Component {
     subclienteId: null,
     filterFalsosPositivos: null,
     errorsUpload: null,
-
-
   }
 
   async componentDidMount() {
@@ -80,14 +79,20 @@ class Register extends Component {
 
     const parametersClient = await getParamsPromise()
     const users = await getUsersByClientPromise()
+
     this.setState({ filters, userAsig: currentUser.id, users, parametersClient })
-    if(currentUser.cliente.outsourcer && currentUser.cliente.clientes !== null && currentUser.cliente.clientes.length > 0 && currentUser.subcliente !== null) {
+    if(currentUser.cliente.outsourcer && currentUser.cliente.clientes !== null
+        && currentUser.cliente.clientes.length > 0
+        && currentUser.subcliente !== null) {
+
       this.setState({ subclienteId: currentUser.subcliente.id })
     }
+
     this.handleApplyFilters()
   }
 
   async handleApplyFilters() {
+    debugger
     await this.setState({ firstLoading: true })
     await this.handlePaginationChange(1)
 
@@ -621,6 +626,7 @@ class Register extends Component {
   }
 
    render() {
+    debugger
     const { t, currentUser } = this.props
     const { breadcrumbs,
             clients,
@@ -659,7 +665,7 @@ class Register extends Component {
             isLoadingMp,
             isLoadingFormReport } = this.state
 
-
+debugger
     const propsUpload = {
       accept: ".xlsx",
       onRemove: file => {
@@ -708,7 +714,11 @@ class Register extends Component {
           </PageHeader>
           <PageContent>
             <Sidebar>
-              <Filters currentUser={ currentUser } parametersClient={ parametersClient } filters={ filters } groups={ groups } categories={ categories } onChangeFilters={ this.handleChangeFilters.bind(this) } />
+              <Filters currentUser={ currentUser }
+                       parametersClient={ parametersClient }
+                       filters={ filters } groups={ groups }
+                       categories={ categories }
+                       onChangeFilters={ this.handleChangeFilters.bind(this) } />
             </Sidebar>
             <Content>
               <ContentTopBar isLoading={ isLoading } firstLoading={ firstLoading } colors={ colors } colorsCake={ colorsCake } filters={ filters } onChangeFilters={ this.handleChangeFilters.bind(this) } />
@@ -720,7 +730,19 @@ class Register extends Component {
                 <>
                   <TableHeaders currentUser={currentUser} />
                   <div className="items">
-                    { clients.map(client => <ClientCard currentUser={ currentUser } client={ client } isActiveFalsePositives={ filters['falsosPositivos'] } handleModalRisk={ this.handleModalRisk.bind(this) } handleViewUbos={ this.handleViewUbos.bind(this) } handleViewProfile={ this.handleViewProfile.bind(this) } />) }
+                    {
+                      clients.map((client, index) =>
+                          < div key={index}>
+                            <ClientCard currentUser={currentUser}
+                                        client={client}
+                                        isActiveFalsePositives={filters['falsosPositivos']}
+                                        handleModalRisk={this.handleModalRisk.bind(this)}
+                                        handleViewUbos={this.handleViewUbos.bind(this)}
+                                        handleViewProfile={this.handleViewProfile.bind(this)}/>
+                          </div>
+                      )
+                    }
+
                   </div>
                 </>
               }
@@ -747,7 +769,9 @@ class Register extends Component {
               <Button onClick={ this.handleOnCancelModalUpload.bind(this) }>{ t('messages.aml.btnClose') }</Button>
               :
               <>
-                <div className="plantilla"><a onClick={() => this.downloadPlantilla('records')}>Plantilla</a></div>
+                <div className="plantilla">
+                  <a href="" onClick={() => this.downloadPlantilla('records')}>Plantilla</a>
+                </div>
                 <Button onClick={ this.handleOnCancelModalUpload.bind(this) }>{ t('messages.aml.cancel') }</Button>
                 <Button type="primary" onClick={ this.handleUploadClient.bind(this) } loading={uploading}>{ t('messages.aml.save') }</Button>
               </>

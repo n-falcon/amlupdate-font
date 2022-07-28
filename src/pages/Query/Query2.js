@@ -90,7 +90,6 @@ class Query2 extends Component {
 
       // if (isSubclientSelected) {
       const queryFirstPage = await getQueryFirstPagePromise(text, subclientId, queryResultsPerPage, queryFiltersPersonType, queryFiltersSearchScope)
-      //debugger
 
       let results = queryFirstPage.results
       if(queryFirstPage.size === 0) {
@@ -231,7 +230,6 @@ class Query2 extends Component {
 
 
   async downloadPdfHis(record){
-    //debugger
     if (record.certificados !== null && record.certificados.length > 0) {
       this.handlePDFReport(record.id, record.certificados[0].pdf)
     }

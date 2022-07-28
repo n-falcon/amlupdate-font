@@ -13,7 +13,14 @@ import i18nextConfig from './config/i18next'
 
 
 /* Pages */
-import { LoginPage, NotFoundPage, NotAuthorizedPage, HomePage, RegisterPage, NewRegisterPage, QueryPage  /*, ProfilePage, OnBoardingPage, NewRegisterPage*/ } from './pages'
+import {LoginPage,
+    NotFoundPage,
+    NotAuthorizedPage,
+    HomePage,
+    RegisterPage,
+    NewRegisterPage,
+    QueryPage,
+    OnBoardingPage /*, ProfilePage, NewRegisterPage*/ } from './pages'
 
 /* Promises */
 import { animateLogoutPromise, changePasswordPromise, getCurrentUserPromise, logoutPromise, removeLoginAnimationsPromise } from './promises'
@@ -196,6 +203,7 @@ class App extends Component {
                                 <Route path="/consulta" exact render={ () => this.renderComponent(QueryPage, 'query') } />
                                 <Route path="/registro" exact render={ () => this.renderComponent(RegisterPage, 'register') } />
                                 <Route path="/registro2" exact render={ () => this.renderComponent(NewRegisterPage, 'new-register') } />
+                                <Route path="/onboarding/" exact render={ () => this.renderComponent(OnBoardingPage, 'onboarding') } />
 
                                 {/*}
                                 <Route path="/consulta2" exact render={ () => this.renderComponent(Query2Page, 'query2') } />
@@ -209,7 +217,6 @@ class App extends Component {
                                 <Route path="/administracion" exact render={ () => this.renderComponent(AdminPage, 'admin') } />
                                 <Route path="/quiebras" exact render={ () => this.renderComponent(QuiebrasPage, 'bankruptcy') } />
                                 <Route path="/conflictos-de-interes" exact render={ () => this.renderComponent(ConflictsOfInterestPage, 'conflict') } />
-                                <Route path="/onboarding/" exact render={ () => this.renderComponent(OnBoardingPage, 'onboarding') } />
                                 <Route path="/forms/1/formTrab/:id/:view?" exact render={ () => <FormTrabPageSmu/>} />
                                 <Route path="/forms/1/formProv/:id/:view?" exact render={ () => <FormProvPageSmu/>} />
                                 <Route path="/forms/1/formDir/:id/:view?" exact render={ () => <FormDirPageSmu/>} />

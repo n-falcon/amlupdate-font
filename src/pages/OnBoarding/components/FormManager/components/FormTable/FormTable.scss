@@ -1,0 +1,202 @@
+.formTable-content{
+	.name-col-table{
+		button {
+			text-align: left;
+			padding: 0px;
+			width: 100%;
+			white-space: normal;
+		}
+	}
+
+	.pagination-formtable{
+		margin-top:20px;
+	}
+
+	.ant-table-row-cell-break-word{
+		padding: 2px;
+	}
+
+  .solicitudes-card{
+		background-color: #FAFFBD;
+		border-radius: 4px;
+		margin: 3px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.total-onb-card{
+		background-color: #fff;
+		border-radius: 4px;
+		margin: 3px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.action-button-form{
+		float:right;
+	}
+
+	.top-bar {
+		height: 40px;
+		// padding-left: 14px;
+		padding-top: 14px;
+		position: relative;
+		top: -20px;
+
+		.advanced-search {
+			background-color: transparent;
+			border-bottom: 1px;
+			border-bottom-style: solid;
+			border-bottom-color: transparent;
+			border-radius: 5px;
+			color: rgba(0, 0, 0, .5);
+			cursor: pointer;
+			padding: 5px 10px 5px 0;
+			position: absolute;
+			right: 14px;
+			top: 14px;
+			.anticon:first-child {
+				font-size: 0.8em;
+				margin-left: 10px;
+				margin-top: -3px;
+			}
+
+			.anticon:last-child {
+				font-size: 0.85em;
+			}
+
+			&.on {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: filters-are-open;
+
+				@keyframes filters-are-open {
+					to {
+						background-color: rgba(0, 0, 0, .075);
+						border-bottom-color: rgba(0, 0, 0, .05);
+					}
+				}
+
+				&:hover {
+					background-color: rgba(0, 0, 0, .075);
+					border-bottom: 1px rgba(0, 0, 0, .05) solid;
+				}
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, .075);
+				border-bottom: 1px rgba(0, 0, 0, .05) solid;
+			}
+		}
+	}
+
+	thead {
+		color: black;
+		background-color: rgb(255, 255, 255);
+
+		th {
+			border-radius: 0 !important;
+			padding: 12px 4px 12px 8px !important;
+		}
+	}
+
+	.ant-table-thead > tr >th {
+		border-spacing: 0 !important;
+		margin-left:1px;
+		margin-bottom:1px;
+		border-right: 1px solid rgba(0,0,0,.1);
+		border-collapse: unset !important;
+		background-color: #fff;
+	}
+
+	.ant-btn-link{
+		font-size: 12px;
+		height: 24px;
+	}
+
+	.ant-table {
+
+		.ant-table-body {
+			margin-left: 0px !important;
+			margin-right: 0px !important;
+
+			.anticon-file-pdf {
+				color: rgba(0,0,250,.7);
+			}
+		}
+
+		font-size: 12px;
+		color: rgba(0, 0, 0, .6);
+
+		.ant-table-column-sorter-inner {
+			margin-top: -0.4em !important;
+		}
+
+		.icon-wrapper {
+			-webkit-box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			-moz-box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			background: rgba(0, 0, 0, .3);
+			border-radius: 20px;
+			height: 40px;
+			line-height: 40px;
+			width: 40px;
+
+			img {
+				display: block;
+				height: 22px;
+				left: 9px;
+				position: relative;
+				top: 9px;
+			}
+		}
+
+		td {
+			//padding: 6px !important;
+		}
+
+		.edit-action {
+			padding: 5px;
+			width: 70px;
+
+			&:hover {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: grey-fade-in;
+
+				@keyframes grey-fade-in {
+					to {
+						background: rgba(0, 0, 0, .07);
+						border-radius: 5px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		.download-report {
+			padding: 5px;
+     	 width: 130px;
+
+			&:hover {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: grey-fade-in;
+
+				@keyframes grey-fade-in {
+					to {
+						background: rgba(0, 0, 0, .07);
+						border-radius: 5px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+
+	.ant-pagination {
+		text-align: center;
+		width: 100%;
+	}
+
+}

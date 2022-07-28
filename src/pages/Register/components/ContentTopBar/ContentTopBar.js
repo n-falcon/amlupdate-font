@@ -17,6 +17,7 @@ const ContentTopBar = ({ isLoading, firstLoading, colors, colorsCake, onChangeFi
     }
   }
 
+  debugger
   return (
     <div className="content-top-bar">
       <div className="cake-wrapper">

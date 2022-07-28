@@ -1132,7 +1132,13 @@ class Register extends Component {
 					<Modal
 						wrapClassName="modal-fichaCliente-onb"
 						style={{top:'10px'}}
-						title={"Ficha de Cliente"}
+						title={
+              [
+              <div>
+                <h1>asdasfasfadf</h1>
+              </div>
+              ]
+            }
 						visible={true}
 						onCancel={handleCancel}
 						cancelText="Cerrar"

@@ -1,5 +1,5 @@
 import './Header.scss'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { camelizerHelper } from '../../../../helpers'
 import { Icon } from 'antd'
 import personIcon from './user-icon-2.png'

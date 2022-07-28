@@ -1,0 +1,233 @@
+.reqTable-content{
+
+  .action-button-form {
+    button {
+      float:right;
+      margin-right: 10px;
+    }
+  }
+
+  .solicitudes-card{
+		background-color: #FAFFBD;
+		border-radius: 4px;
+		margin: 3px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.total-onb-card{
+		background-color: #fff;
+		border-radius: 4px;
+		margin: 3px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.top-bar {
+		height: 40px;
+		// padding-left: 14px;
+		padding-top: 14px;
+		position: relative;
+		top: -20px;
+
+		.advanced-search {
+			background-color: transparent;
+			border-bottom: 1px;
+			border-bottom-style: solid;
+			border-bottom-color: transparent;
+			border-radius: 5px;
+			color: rgba(0, 0, 0, .5);
+			cursor: pointer;
+			padding: 5px 10px 5px 0;
+			position: absolute;
+			right: 14px;
+			top: 14px;
+			.anticon:first-child {
+				font-size: 0.8em;
+				margin-left: 10px;
+				margin-top: -3px;
+			}
+
+			.anticon:last-child {
+				font-size: 0.85em;
+			}
+
+			&.on {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: filters-are-open;
+
+				@keyframes filters-are-open {
+					to {
+						background-color: rgba(0, 0, 0, .075);
+						border-bottom-color: rgba(0, 0, 0, .05);
+					}
+				}
+
+				&:hover {
+					background-color: rgba(0, 0, 0, .075);
+					border-bottom: 1px rgba(0, 0, 0, .05) solid;
+				}
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, .075);
+				border-bottom: 1px rgba(0, 0, 0, .05) solid;
+			}
+		}
+	}
+
+	thead {
+		color: black;
+		background-color: rgb(255, 255, 255);
+
+		th {
+			border-radius: 0 !important;
+			padding: 12px 4px 12px 8px !important;
+		}
+	}
+
+	.ant-table {
+		font-size: 12px;
+		color: rgba(0, 0, 0, .6);
+
+		.ant-table-body {
+			margin-left: 0px !important;
+		}
+
+		.ant-table-placeholder {
+			margin-right: 8px;
+		}
+
+		.ant-table-column-sorter-inner {
+			margin-top: -0.4em !important;
+		}
+
+		.ant-table-thead > tr >th {
+			border-spacing: 0 !important;
+			margin-left:1px;
+			margin-bottom:1px;
+			border-right: 1px solid rgba(0,0,0,.1);
+			border-collapse: unset !important;
+			background-color: #fff;
+		}
+
+		.icon-wrapper {
+			-webkit-box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			-moz-box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			background: rgba(0, 0, 0, .3);
+			border-radius: 20px;
+			height: 40px;
+			line-height: 40px;
+			width: 40px;
+
+			img {
+				display: block;
+				height: 22px;
+				left: 9px;
+				position: relative;
+				top: 9px;
+			}
+		}
+
+		td {
+			padding: 10px;
+		}
+
+		.metrics-wrapper {
+			width: 165px;
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					font-size: 0.9em;
+					line-height: 12px;
+					padding: 0 0 6px;
+
+					.bar-wrapper {
+						overflow: hidden;
+
+						span {
+							display: inline-block;
+							// float: left;
+							width: 63px !important;
+						}
+
+						.bar {
+							background: rgba(0, 0, 0, .1);
+							border-radius: 6px;
+							float: right;
+							overflow: hidden;
+							width: 100px !important;
+
+							.bar-inner {
+								background: rgba(0, 0, 0, .1);
+								font-size: 1em;
+								height: 12px;
+								text-indent: 3px;
+								// width: 70px;
+								position: absolute;
+								border-radius: 6px;
+							}
+						}
+					}
+
+					&:last-child {
+						padding: 0;
+					}
+				}
+			}
+		}
+
+		.edit-action {
+			padding: 5px;
+			width: 70px;
+
+			&:hover {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: grey-fade-in;
+
+				@keyframes grey-fade-in {
+					to {
+						background: rgba(0, 0, 0, .07);
+						border-radius: 5px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		.download-report {
+		padding: 5px;
+     	 width: 130px;
+
+			&:hover {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: grey-fade-in;
+
+				@keyframes grey-fade-in {
+					to {
+						background: rgba(0, 0, 0, .07);
+						border-radius: 5px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		table {
+			border-radius: 0 !important;
+		}
+	}
+
+	.ant-pagination {
+		text-align: center;
+		width: 100%;
+	}
+}

@@ -1,0 +1,28 @@
+.reporting-form-content{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+
+    .row-wrapper-reporting{
+        padding: 20px;
+    }
+    .step-number-reporting{
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        border: 2px solid;
+        border-radius: 16px;
+        height: 32px;
+        width: 32px;
+    }
+
+    .step-title-reporting{
+        font-size: 16px;
+        margin-top: 2px;
+    }
+
+    .step-label-reporting{
+        margin-bottom: 10px;
+    }
+}

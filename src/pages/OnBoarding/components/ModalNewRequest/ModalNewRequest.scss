@@ -1,0 +1,36 @@
+.modal-newrequest-onb{
+    border-radius: 5px;
+    background-color: white;
+    //margin-right: 10px;
+
+    .topBar-nr-onb-title{
+        text-align: left;
+        font-style: oblique;
+    }
+
+    .topBar-nr-onb{
+        background-color: rgba(204, 204, 204, 0.15);
+        border-radius: 2px;
+        padding: 10px;
+        .button-close-ob{
+            color: black;
+            text-align: right;
+        }
+    }
+
+    .nr-onb-content-steps{
+        padding:5px;
+        border-radius: 5px;
+
+        .nr-onb-steps{
+            padding:10px;
+        }
+    }
+
+    .steps-buttons{
+        vertical-align: bottom;
+        text-align: right;
+        margin-top:100px;
+        position: right;
+    }
+}

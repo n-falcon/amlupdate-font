@@ -1,0 +1,91 @@
+.dashboard{
+    .section{
+        background-color: white;
+        border-radius: 7px;
+        padding: 20px;
+    }
+
+    .spin-container-dashboard{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 322px;
+        width: 878px;
+    }
+
+    .pendientes-text-onb{
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(6, 6, 138);
+    }
+
+    .rp-inner-wrapper{
+        margin-top: 20px;
+    }
+
+    .percent-block-wrapper-onb{
+        .ant-col{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
+            .content {
+                height: 120px;
+
+                .ant-spin {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%)
+                }
+            }
+        }
+
+        .ant-progress-circle {
+            cursor: pointer;
+        }
+
+        .pie-wrapper-dashboard{
+            width: 60%;
+
+            div.na {
+                text-align: center;
+                padding: 50px;
+                width: 125px;
+                height: 125px;
+                font-weight: 800;
+                vertical-align: middle;
+                border: 1px solid rgba(0,0,0,.4);
+                border-radius: 62px;
+            }
+        }
+    }
+
+    .label-percent-wrapper-onb{
+        .ant-col{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3{
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(6, 6, 138);
+        }
+
+        h4{
+            font-size: 14px;
+            font-weight: 400;
+            color: rgb(6, 6, 138);
+        }
+
+        div.risk{
+            color: rgb(6, 6, 138);
+        }
+    }
+}
