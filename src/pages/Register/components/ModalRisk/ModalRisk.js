@@ -202,7 +202,6 @@ const ModalRisk = ({ record }) => {
       dataIndex: 'estadoFP',
       width: 80,
       render: (text) => {
-        debugger
         if (text === null) {
           return <Tooltip title="Coincidencia exacta"><Icon type="check" /></Tooltip>
         } else if (text === 'PENDIENTE') {

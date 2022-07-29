@@ -125,7 +125,6 @@ class ModalClient extends React.Component {
   handleOnChange = (key, value) => {
     const { client } = this.state
     client[key] = value
-    //debugger
     if(key === 'type' && client.id === undefined) {
       client.processUF = false
       client.formularioInterno = true

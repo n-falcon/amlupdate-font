@@ -456,7 +456,6 @@ class Register extends Component {
 
     bajaClientesPromise(formData)
     .then(results => {
-      debugger
       if((results.status === 'OK')) {
         let resultsUpload = []
         for(let key in results.result) {
