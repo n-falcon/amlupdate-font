@@ -1,8 +1,8 @@
 import './CakeChart.scss'
-import React, {useState} from "react";
+import React from "react";
 import {useTranslation} from 'react-i18next'
 import {Spin} from 'antd'
-import PieChart from 'react-minimal-pie-chart'
+import Plot from "react-plotly.js";
 
 const CakeChart = ({isLoading, firstLoading, colorsCake}) => {
     const {t} = useTranslation()
@@ -16,6 +16,41 @@ const CakeChart = ({isLoading, firstLoading, colorsCake}) => {
         {title: t('messages.aml.notProcessed'), value: colorsCake.na, color: '#999'}
     ]
 
+    const graphGenerator = (graphData) => {
+        const values = graphData.map(x => x.value);
+        const labels = graphData.map(x => x.title);
+        const color =  graphData.map(x => x.color);
+
+        const dataGraph = [{
+            type: "pie",
+            values: values,
+            labels: labels,
+            hoverinfo: "",
+            textposition: "inside",
+            textinfo: 'none',
+            automargin: false,
+            hole: .75,
+            marker: {
+                colors: color
+            },
+        },
+        ]
+        const layoutGraph = {
+            showlegend: false,
+            height: 126,
+            width: 126,
+            margin: {
+                l: 4,
+                r: 4,
+                b: 4,
+                t: 4,
+            },
+        }
+        return (
+            <Plot data={dataGraph} layout={layoutGraph} />
+        )
+    }
+
     return (
         <div className="cake">
             {firstLoading ?
@@ -24,16 +59,7 @@ const CakeChart = ({isLoading, firstLoading, colorsCake}) => {
                 </div>
                 :
                 <>
-                    <PieChart
-                        className={isLoading ? 'is-loading' : ''}
-                        animate={true}
-                        animationDuration={500}
-                        animationEasing="ease-out"
-                        cx={50}
-                        cy={50}
-                        data={data}
-                        lineWidth={25}
-                    />
+                    {graphGenerator(data)}
                     <span className="results-number">{colorsCake.total}</span>
                     <span className="results-label">{t('messages.aml.results')}</span>
                 </>

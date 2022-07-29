@@ -92,7 +92,6 @@ class Register extends Component {
   }
 
   async handleApplyFilters() {
-    debugger
     await this.setState({ firstLoading: true })
     await this.handlePaginationChange(1)
 
@@ -620,13 +619,8 @@ class Register extends Component {
     ReportService.read('/inputFile', {id: 'tmp/' + errorsUpload}, null, 'reporte.xlsx')
   }
 
-  uploadRelated() {
-    const { errorsUpload } = this.state
-    ReportService.read('/inputFile', {id: 'tmp/' + errorsUpload}, null, 'reporte.xlsx')
-  }
 
    render() {
-    debugger
     const { t, currentUser } = this.props
     const { breadcrumbs,
             clients,
@@ -665,7 +659,6 @@ class Register extends Component {
             isLoadingMp,
             isLoadingFormReport } = this.state
 
-debugger
     const propsUpload = {
       accept: ".xlsx",
       onRemove: file => {
@@ -934,7 +927,6 @@ debugger
                         </div>
                       </div>
                   }
-
                 </Form>
               }
           </Modal>
@@ -998,6 +990,7 @@ debugger
               }
           </Modal>
         }
+
         { isModalRiskVisible &&
           <Modal
             title={ t('messages.aml.risk') }
