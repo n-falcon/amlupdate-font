@@ -1,0 +1,40 @@
+.admin-search {
+  .page-header {
+    .download-report {
+      position: absolute;
+      right: 20px;
+      top: 33px;
+    }
+  }
+
+  .ant-pagination {
+    position: relative;
+    top: 73px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .pdfButton {
+    width: 80px;
+  }
+
+  div.table-wrapper {
+    height: 507px;
+  }
+
+  .ant-badge {
+    .ant-scroll-number {
+      background: rgba(0, 0, 0, .2) !important;
+      color: white;
+      box-shadow: none;
+      line-height: 18px;
+      height: 18px;
+      width: 23px;
+      padding: 0;
+
+      p {
+        font-size: 0.8em !important;
+      }
+    }
+  }
+}

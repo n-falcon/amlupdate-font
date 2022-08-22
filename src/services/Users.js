@@ -1,7 +1,7 @@
 import apiConfig from '../config/api'
 import { apiRequestorHelper } from '../helpers'
 
-export default {
+const UsersService =  {
   create: (user) => {
     return apiRequestorHelper({
       url: apiConfig.url + '/saveUser',
@@ -40,3 +40,5 @@ export default {
     })
   },
 }
+
+export default UsersService

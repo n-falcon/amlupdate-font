@@ -8,9 +8,9 @@ if ( process.env.REACT_APP_ENV === 'prod') {
   api.url = 'https://apiqa.amlupdate.com/api'
   api.urlAml = 'https://qa.amlupdate.com/mvc'
 }else {
-  //api.url = 'http://localhost:5000/api'
+  api.url = 'http://localhost:5000/api'
   api.urlAml = 'https://qa.amlupdate.com/mvc'
-  api.url = 'https://apiqa.amlupdate.com/api'
+  //api.url = 'https://apiqa.amlupdate.com/api'
 }
 
 export default api

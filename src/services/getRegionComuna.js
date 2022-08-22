@@ -1,7 +1,7 @@
 import apiConfig from '../config/api'
 import { apiRequestorHelper } from '../helpers'
 
-export default {
+const getRegionComunaService = {
   getRegionComunaService: (countryCode) => {
     return apiRequestorHelper({
       url: apiConfig.url + '/public/getRegionesByCountry/'+countryCode,
@@ -9,3 +9,5 @@ export default {
     })
   },
 }
+
+export default getRegionComunaService;

@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  app:
+    image: node:16-alpine # incluye npm y npx para instalar dependencias
+    volumes:
+      - ./:/app   #montamos ruta de trabajo actual a fichero del contenerdor
+    working_dir: /app #fuerza a utilizar los comando de ejecucución en el fichero del contedor
+    ports:
+      - "3000:3000"
+    command: npm start
+    tty: true

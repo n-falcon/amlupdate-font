@@ -321,6 +321,8 @@
    "messages.aml.parameters": "Parámetros",
    "messages.aml.auditTitle": "Auditoría",
    "messages.aml.searches": "Búsquedas",
+   "messages.aml.admin.query": "Consultas",
+   "messages.aml.admin.log": "Log Bases",
    "messages.aml.apply": "Aplicar",
    "messages.aml.restore": "Restaurar",
    "messages.aml.allTheUsers": "Todos los usuarios",
