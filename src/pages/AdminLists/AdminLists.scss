@@ -1,0 +1,19 @@
+.admin-lists {
+  .tools-area {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: right;
+  }
+
+  .table-wrapper {
+    min-height: 420px;
+    position: relative;
+  }
+
+  .ant-pagination {
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+  }
+}

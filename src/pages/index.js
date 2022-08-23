@@ -1,14 +1,14 @@
 
 //import Admin from './Admin/Admin'
-//import AdminLists from './AdminLists/AdminLists'
+import AdminLists from './AdminLists/AdminLists'
 import AdminConsultas from './AdminConsultas/AdminConsultas'
-//import AdminRisk from './AdminParams/AdminRisk'
-//import AdminGroups from './AdminParams/AdminGroups'
+import AdminRisk from './AdminParams/AdminRisk'
+import AdminGroups from './AdminParams/AdminGroups'
 //import AlertManager from './AlertManager/AlertManager'
 //import Batch from './Batch/Batch'
 //import ConflictsOfInterest from './ConflictsOfInterest/ConflictsOfInterest'
 import AdminSearch from './AdminSearch/AdminSearch'
-//import AdminAuthIps from './AdminAuthIps/AdminAuthIps'
+import AdminAuthIps from './AdminAuthIps/AdminAuthIps'
 import NewRegister from './Register/NewRegister'
 import Register from './Register/Register'
 import Home from './Home/Home'
@@ -40,7 +40,7 @@ export const OnBoardingPage = OnBoarding
 export const AdminPage = Admin
 export const AdminUsersPage = AdminUsers
 export const AdminAuditPage = AdminAudit
-//export const AdminAuthIpsPage = AdminAuthIps
+export const AdminAuthIpsPage = AdminAuthIps
 export const AdminSearchPage = AdminSearch
 
 
@@ -50,10 +50,10 @@ export const AdminSearchPage = AdminSearch
 
 
 
-//export const AdminListsPage = AdminLists
+export const AdminListsPage = AdminLists
 export const AdminConsultasPage = AdminConsultas
-//export const AdminRiskPage = AdminRisk
-//export const AdminGroupsPage = AdminGroups
+export const AdminRiskPage = AdminRisk
+export const AdminGroupsPage = AdminGroups
 //export const AlertManagerPage = AlertManager
 //export const BatchPage = Batch
 //export const ConflictsOfInterestPage = ConflictsOfInterest

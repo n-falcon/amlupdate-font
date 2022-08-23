@@ -3,7 +3,17 @@ import React, { Component } from 'react'
 import { withTranslation } from 'react-i18next'
 import { Tabs } from 'antd'
 import { Page, PageBottomBar, PageContent, PageFooter, PageHeader, PageTopBar } from '../../layouts/Private/components'
-import { AdminUsersPage, AdminAuditPage, AdminSearchPage, AdminConsultasPage ,AdminLogBasesPage/*, AdminAuthIpsPage, AdminListsPage, AdminRiskPage, AdminGroupsPage*/ } from '../'
+
+import {
+  AdminUsersPage,
+  AdminAuditPage,
+  AdminSearchPage,
+  AdminConsultasPage,
+  AdminLogBasesPage,
+  AdminListsPage,
+  AdminAuthIpsPage,
+  AdminRiskPage,
+  AdminGroupsPage} from '../'
 
 const { TabPane } = Tabs
 
@@ -63,22 +73,22 @@ class Admin extends Component {
 
               { currentUser.cliente.modules.includes('NEG') && (currentUser.type === 'SADMIN' || (currentUser.modules !== null && currentUser.modules.includes('LOADNEG'))) &&
                 <TabPane tab={ t('messages.aml.ownLists') } key="6">
-                  {/*<AdminListsPage currentUser={ currentUser } /> */}
+                  <AdminListsPage currentUser={ currentUser } />
                 </TabPane>
               }
               { currentUser.type === 'SADMIN' &&
                 <TabPane tab={ t('messages.aml.risk') } key="7">
-                  {/*<AdminRiskPage currentUser={ currentUser } /> */}
+                  <AdminRiskPage currentUser={ currentUser} />
                 </TabPane>
               }
               { currentUser.type === 'SADMIN' && currentUser.cliente.modules.includes('REGISTRO') &&
                 <TabPane tab={ t('messages.aml.groups') } key="8">
-                  {/*<AdminGroupsPage currentUser={ currentUser } /> */}
+                  <AdminGroupsPage currentUser={ currentUser } />
                 </TabPane>
               }
               { currentUser.type === 'SADMIN' &&
                 <TabPane tab={ t('messages.aml.parameters') } key="9">
-                  {/*<AdminAuthIpsPage currentUser={ currentUser } /> */}
+                  <AdminAuthIpsPage currentUser={ currentUser } />
                 </TabPane>
               }
             </Tabs>
