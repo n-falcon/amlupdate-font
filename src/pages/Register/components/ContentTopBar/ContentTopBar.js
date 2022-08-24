@@ -1,5 +1,5 @@
 import './ContentTopBar.scss'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { Icon, Switch } from 'antd'
 import { useTranslation } from 'react-i18next'
 import { CakeChart } from '../'
@@ -7,15 +7,6 @@ import { CakeChart } from '../'
 const ContentTopBar = ({ isLoading, firstLoading, colors, colorsCake, onChangeFilters, filters }) => {
   const { t } = useTranslation()
 
-  useEffect(() => {
-    //init()
-  }, [])
-
-  const init = async () => {
-    if(filters['amlStatus'] === null) {
-      //filters['amlStatus'] = ['BLACK', 'RED', 'YELLOW', 'GREEN', 'NA']
-    }
-  }
 
   return (
     <div className="content-top-bar">

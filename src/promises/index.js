@@ -11,6 +11,10 @@ import getBase64 from './getBase64'
 import getParametroByKey from './getParametroByKey'
 import getSIIActivities from './getSIIActivities'
 import getRegionComuna from './getRegionComuna'
+import generateReport from './generateReport'
+import getReport from './getReport'
+import getReportByUser from './getReportByUser'
+import deleteReport from './deleteReport'
 
 export const animateLogoutPromise = animateLogout
 export const changePasswordPromise = changePassword
@@ -25,3 +29,7 @@ export const getBase64Promise = getBase64
 export const getParametroByKeyPromise = getParametroByKey
 export const getSIIActivitiesPromise = getSIIActivities
 export const getRegionComunaPromise = getRegionComuna
+export const generateReportPromise = generateReport
+export const getReportPromise = getReport;
+export const getReportByUserPromise = getReportByUser;
+export const deleteReportPromise = deleteReport;

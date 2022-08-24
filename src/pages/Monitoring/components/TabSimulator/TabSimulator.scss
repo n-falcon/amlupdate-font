@@ -1,0 +1,248 @@
+.tab-simulator {
+  .top-bar {
+    border-bottom: 1px rgba(0, 0, 0, .2) solid;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+  }
+
+
+  .btn-clear {
+    width: 30px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.0) !important;
+    font-size: 0.8em;
+    z-index:1000;
+    border: 0px;
+  }
+
+  .alerts-pseudo-table {
+    border: 1px rgba(0, 0, 0, .15) solid;
+    border-radius: 5px;
+    min-height: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 25px -3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 25px -3px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 25px -3px rgba(0,0,0,0.15);
+
+    .thead {
+      .section {
+        float: left;
+
+        h4 {
+          background: #666;
+          -webkit-box-shadow: 0px 2px 20px -8px rgba(0,0,0,0.75);
+          -moz-box-shadow: 0px 2px 20px -8px rgba(0,0,0,0.75);
+          box-shadow: 0px 2px 20px -8px rgba(0,0,0,0.75);
+          color: rgba(255, 255, 255, .5);
+          height: 40px;
+          line-height: 40px;
+          margin: 0;
+          text-align: center;
+        }
+
+        .th {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+
+          p {
+            color: rgba(0, 0, 0, .5) !important;
+            display: block !important;
+            font-size: 0.8em;
+            line-height: 1.1em;
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        &:first-child {
+          overflow: hidden;
+          width: 66.999%;
+          position: relative;
+          z-index: 2;
+
+          h4 {
+            border-top-left-radius: 5px;
+            position: relative;
+            z-index: 2;
+          }
+
+          .th {
+            background-color: rgba(0, 0, 0, .1);
+            border-right: 1px rgba(0, 0, 0, .2) solid;
+            height: 72px;
+            float: left;
+            padding: 0 10px;
+
+            &:last-child {
+              border-right: 0;
+            }
+          }
+
+          .th:nth-child(1) {
+            border: 1px #f00 solid !important;
+            width: 300px !important;
+          }
+
+        }
+
+        &:last-child {
+          overflow: hidden;
+          width: 33%;
+
+          h4 {
+            -webkit-box-shadow: inset 29px 0px 27px -22px rgba(0,0,0,0.02);
+            -moz-box-shadow: inset 29px 0px 27px -22px rgba(0,0,0,0.02);
+            box-shadow: inset 29px 0px 27px -22px rgba(0,0,0,0.02);
+            background: #555;
+            border-top-right-radius: 5px;
+          }
+
+          p {
+            padding-left: 20px;
+            position: relative;
+          }
+
+          .th {
+            background: rgba(0, 0, 0, .15);
+            height: 72px;
+            width: 50%;
+            float: left !important;
+            -webkit-box-shadow: inset 29px 0px 27px -22px rgba(0,0,0,0.08);
+            -moz-box-shadow: inset 29px 0px 27px -22px rgba(0,0,0,0.08);
+            box-shadow: inset 29px 0px 27px -22px rgba(0,0,0,0.08);
+
+            &:last-child {
+            }
+          }
+        }
+      }
+    }
+
+    .tbody {
+      min-height: 500px;
+
+      .alert-item {
+        background-image: url(./shadow.png);
+        background-repeat: repeat-y;
+        background-position:  582px top;
+        -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.015);
+        -moz-box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.015);
+        box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.015);
+
+        border-bottom: 1px rgba(0, 0, 0, .1) solid;
+        clear: left;
+        overflow: hidden;
+
+        .alert-title {
+          background: rgba(0, 0, 0, .35);
+          border-radius: 5px;
+          color: rgba(255, 255, 255, .7);
+          margin: 10px 10px 0;
+          padding: 5px 0;
+          text-align: center;
+          position: relative;
+        }
+
+        .ant-col {
+          padding: 10px;
+          margin: 0;
+          width: 22%;
+
+          .col-inner {
+            p {
+              color: rgba(0, 0, 0, .5);
+              font-size: 0.9em;
+              margin-bottom: 5px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .circle {
+                background: rgba(0, 0, 0, .5);
+                color: rgba(255, 255, 255, .6);
+                display: inline-block;
+                font-size: 0.8em;
+                font-weight: bold;
+                line-height: 20px;
+                height: 20px;
+                text-align: center;
+                width: 20px;
+
+                &:last-child {
+                  background: green;
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          background-color: rgba(255, 255, 255, .25);
+        }
+
+        &:hover {
+          background-color: #fff;
+          background-image: none;
+          cursor: pointer;
+          animation-name: hoverAnim;
+          animation-duration: 0.1s;
+          animation-fill-mode: forwards;
+          border-radius: 10px;
+
+          @keyframes hoverAnim {
+            to {
+              background-color: #fff;
+              transform: scaleX(3) !important;
+            }
+          }
+        }
+      }
+    }}
+
+    .last-one {
+      overflow: hidden;
+      width: 300px !important;
+
+      .area {
+        float: left;
+        width: 50%;
+
+        &:first-child {
+        }
+
+        &:last-child {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    .bottom-bar {
+      -webkit-box-shadow: inset 0px 152px 18px -143px rgba(0,0,0,0.15);
+      -moz-box-shadow: inset 0px 152px 18px -143px rgba(0,0,0,0.15);
+      box-shadow: inset 0px 152px 18px -143px rgba(0,0,0,0.15);
+
+      background: rgba(0, 0, 0, .3);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .ant-progress-line {
+      width: 70%;
+    }
+}
+
+.modal-view {
+  width: 500px !important;
+  height: 500px !important;
+}

@@ -1,4 +1,4 @@
-export default {
+const localStorage = {
   create: (key, value) => {
     return window.localStorage.setItem(key, value)
   },
@@ -15,3 +15,5 @@ export default {
     return window.localStorage.removeItem(key)
   }
 }
+
+export default localStorage

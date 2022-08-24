@@ -232,7 +232,7 @@ const FormKyc = ({ form, match }) => {
   const infoEcoIS= {
     infoEcoTipoContri: { key: "tipoContribuyente", title: "Tipo de contribuyente", id: "infoEcoTipoContri", required:true, readOnly:true, type: 'select', section: 'tributaria' },
     infoEcoResolucion: { key: "nroResolucion", val: "", title: "Nro. Resolución", id: "infoEcoResolucion", required:false, readOnly:true, type: 'input', section: 'tributaria'},
-    infoEcoRegimen: { key: "regimen", title:"Tipo de Régimen", id: 'infoEcoRegimen', required: true, type: 'input', required: false, section: 'tributaria'},
+    infoEcoRegimen: { key: "regimen", title:"Tipo de Régimen", id: 'infoEcoRegimen', type: 'input', required: false, section: 'tributaria'},
     infoEcoFiscalObligations: { key: "fiscalObligations", title: "¿Tiene obligaciones fiscales en otro país?", id: "infoEcoFiscalObligations", required:true, readOnly:true, type: 'select', section: 'tributaria' },
     infoEcoFisObligationsCountry: { key: "fisObligationsCountry", title: "Indicar el país", id: "infoEcoFisObligationsCountry", required:true, readOnly:true, type: 'select', section: 'tributaria' },
     infoEcoHasExMon: { key: "hasExMon", val: null, title: "¿Cuál(es) de las siguientes operaciones realiza en moneda extranjera", maxLength:200, id: "infoEcoHasExMon", required:true, readOnly:true, section:'monedaExtranjera' },
@@ -1304,7 +1304,7 @@ const FormKyc = ({ form, match }) => {
   }
 
   const getPepRelationColumns = () => {
-    var columns = []
+     let columns = []
     if(apiForm.typeSol === 'PN') {
       columns.push(
         {
@@ -1553,7 +1553,8 @@ const FormKyc = ({ form, match }) => {
                           marginLeft: "8px",
                         }}
                       >
-                        {apiForm.folio !== null ? apiForm.folio : ""}
+                        {apiForm.
+                            folio !== null ? apiForm.folio : ""}
                       </div>
                     </Col>
                     <Col span={19} style={{ textAlign: "right" }}>

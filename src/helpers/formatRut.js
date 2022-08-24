@@ -27,9 +27,9 @@ var formatRut = {
     if (typeof (_rut) !== 'string') {
       return false;
     }
-    var cRut = _rut.replace(/[\.-]/g, '');
-    var cDv = cRut.charAt(cRut.length - 1).toUpperCase();
-    var nRut = parseInt(cRut.substr(0, cRut.length - 1));
+    let cRut = _rut.replace(/[\.-]/g, '');
+    let cDv = cRut.charAt(cRut.length - 1).toUpperCase();
+    let nRut = parseInt(cRut.substr(0, cRut.length - 1));
     if (isNaN(nRut)) {
       return false;
     }

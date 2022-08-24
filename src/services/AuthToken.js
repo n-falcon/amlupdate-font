@@ -1,7 +1,7 @@
 import apiConfig from '../config/api'
 import { apiRequestorHelper } from '../helpers'
 
-export default {
+const authToken = {
   create: (username, password, time) => {
     return apiRequestorHelper({
       url: apiConfig.url + '/authenticate',
@@ -24,3 +24,5 @@ export default {
     })
   }
 }
+
+export default authToken
