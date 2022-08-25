@@ -1,0 +1,20 @@
+.tab-new-request {
+	padding: 0px 10px;
+	height: 550px;
+
+	.ant-row {
+		margin-bottom: 10px;
+
+		button {
+			width: 450px;
+			text-align: left;
+		}
+	}
+
+	p {		
+		&:last-child {
+			position: absolute;
+			bottom: 0px;
+		}
+	}
+}

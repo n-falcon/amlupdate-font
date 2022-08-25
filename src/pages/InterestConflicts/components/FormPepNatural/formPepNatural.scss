@@ -1,0 +1,160 @@
+
+.form-pep-natural {
+
+  .ant-calendar{
+    width: 200px;
+  }
+
+  .site-layout-content {
+    background: rgb(141, 139, 139);
+    padding: 24px;
+    min-height: 280px;
+  }
+  #components-layout-demo-top .logo {
+    width: 120px;
+    height: 31px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px 24px 16px 0;
+    float: left;
+  }
+
+  .form-content.form-validate-messages {
+  }
+
+
+
+
+  .form-content {
+    &.form-validate-messages {
+      div.has-error div.ant-form-explain {
+        display: none;
+      }
+    }
+
+    .form-form {
+      border-style: solid;
+      border-width: 2px;
+      padding: 20px;
+
+
+
+      .radio-switch {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+      }
+
+      .tooltip-form {
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      .ant-form-item-label {
+        line-height: 0px; //separation with input box
+        padding-left: 10px;
+      }
+
+      .ant-form-item {
+        margin-bottom: 12px;
+      }
+
+      .leftLabel {
+        .ant-form-item-label {
+          padding-top: 12px;
+          text-align: left;
+          // line-height: 14px;
+          line-height: normal;
+        }
+        .ant-form-item {
+          margin-bottom: 0px;
+        }
+      }
+
+      .topLabel {
+        .ant-form-item-label {
+          line-height: 16px;
+        }
+      }
+
+      .clean-header {
+        margin-bottom: 0px;
+      }
+
+      .submitResponsible {
+        text-align: center;
+      }
+
+      .submitTrabajador {
+        text-align: center;
+      }
+
+      .submit-button {
+        background-color: green !important;
+      }
+
+      .subheader {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding-left: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .content {
+        padding: 0px;
+        &.observaciones {
+          border-style: solid;
+          border-width: 1px;
+          border-color: rgba(0, 0, 0, 0.4);
+        }
+        &.submit-content {
+          margin-top: 40px;
+        }
+      }
+
+      pre.obs {
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        background-color: #fff;
+        padding: 5px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        line-height: 25px;
+        white-space: pre-line; /* CSS3 browsers  */
+        white-space: -moz-pre-line !important; /* 1999+ Mozilla  */
+        white-space: -pre-line; /* Opera 4 thru 6 */
+        white-space: -o-pre-line; /* Opera 7 and up */
+        word-wrap: break-word; /* IE 5.5+ and up */
+      }
+
+      .summary {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .switch-col {
+        .radio-item {
+          margin-left: 40px;
+          margin-bottom: 0px;
+        }
+      }
+
+      div.p-summary {
+        height: 50px;
+      }
+
+      div.summary > div.radio-item {
+        position: absolute;
+        width: 12.5%;
+        top: 0px;
+        right: 0px;
+        padding-left: 40px;
+      }
+    }
+  }
+}

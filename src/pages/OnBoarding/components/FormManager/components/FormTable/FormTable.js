@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import moment from 'moment'
 import { getItemsPromise, sendRemindersOnbPromise, deleteDeclarationsPromise } from '../../promises'
 import {ModalIndexCardPage} from '../../components'
-//import {ModalPdfViewer} from '../../../../../ConflictsOfInterest/components'
+//import {ModalPdfViewer} from '../../../../../InterestConflicts/components'
 import { AdvancedTabsComponent } from '../../components';
 
 const FormTable = ({categoria, rut, options, isAdvancedSearchVisible, areas}) => {

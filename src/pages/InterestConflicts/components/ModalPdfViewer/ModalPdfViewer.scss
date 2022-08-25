@@ -1,0 +1,15 @@
+.modal-pdf-viewer{
+	.ant-modal-body {
+		height: calc(100vh - 60px);
+		padding: 12px;
+		.spin-pdf-viewer{
+			text-align: center;
+			border-radius: 4px;
+			margin-bottom: 20px;
+			padding: 286px 50px;
+			margin: 20px 0;
+		}
+	}
+
+	
+}

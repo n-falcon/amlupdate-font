@@ -6,6 +6,9 @@ import {I18nextProvider} from 'react-i18next'
 import moment from 'moment'
 import 'moment/locale/es'
 import i18nextConfig from './config/i18next'
+import {message, Icon, Tooltip} from 'antd'
+import {globalContext} from './contexts'
+
 
 /* Pages */
 import {
@@ -21,11 +24,11 @@ import {
     ProfilePage,
     MonitoringPage,
     AlertManagerPage,
-    //BatchPage,
-    //ConflictsOfInterestPage,
-    //QuiebrasPage,
-    //StakeholderPage,
-    //Query2Page,
+    BatchPage,
+    InterestConflictsPage,
+    QuiebrasPage,
+    StakeholderPage,
+    Query2Page,
 
 } from './pages'
 
@@ -43,7 +46,7 @@ import {generateReportPromise, getReportPromise, getReportByUserPromise, deleteR
 import {authTokenValidatorHelper, sessionStorageCleanerHelper, authTokenRenewerHelper} from './helpers'
 
 /* Services */
-import {LocalStorageService} from './services'
+import {LocalStorageService, ReportService} from './services'
 
 /* layouth */
 import {Loading, ModalChangePassword} from './layouts/Private/components'
@@ -51,18 +54,40 @@ import {LayoutPrivate, LayoutPublic} from './layouts'
 
 /*Formularios */
 
-/*
-import {FormFPPage, FormSocPage, FormGiftPage,FormTravelPage,FormValuesPage,FormPepNaturalPage} from './pages/ConflictsOfInterest/components'
-import {FormTrabPage as FormTrabPageSmu, FormProvPage as FormProvPageSmu, FormDirPage as FormDirPageSmu } from './pages/ConflictsOfInterest/components/smu'
-import {FormTrabPage as FormTrabPageNC, FormProvPage as FormProvPageNC, FormDirPage as FormDirPageNC } from './pages/ConflictsOfInterest/components/nuevocapital'
-import {FormTrabPage as FormTrabPageCLA, FormProvPage as FormProvPageCLA, FormDirPage as FormDirPageCLA } from './pages/ConflictsOfInterest/components/cajalosandes'
-import {FormTrabPage as FormTrabPageBtg, FormPatrPage as FormPatrPageBtg  } from './pages/ConflictsOfInterest/components/btg'
-import {FormTrabPage as FormTrabPageSC } from './pages/ConflictsOfInterest/components/santanderConsumer'
-import {FormTrabPage as FormTrabPageFam} from './pages/ConflictsOfInterest/components/famae'
-import { FormKycPage } from './pages/OnBoarding/components'
-import { FormKycPagePar } from './pages/OnBoarding/components/parauco'
-import { FormTrabGenPage as FormTrabPageGen } from './pages/ConflictsOfInterest/components/GenericFormTrab'
- */
+
+import {
+    FormFPPage,
+    FormSocPage,
+    FormGiftPage,
+    FormTravelPage,
+    FormValuesPage,
+    FormPepNaturalPage
+} from './pages/InterestConflicts/components'
+import {
+    FormTrabPage as FormTrabPageSmu,
+    FormProvPage as FormProvPageSmu,
+    FormDirPage as FormDirPageSmu
+} from './pages/InterestConflicts/components/smu'
+import {
+    FormTrabPage as FormTrabPageNC,
+    FormProvPage as FormProvPageNC,
+    FormDirPage as FormDirPageNC
+} from './pages/InterestConflicts/components/nuevocapital'
+import {
+    FormTrabPage as FormTrabPageCLA,
+    FormProvPage as FormProvPageCLA,
+    FormDirPage as FormDirPageCLA
+} from './pages/InterestConflicts/components/cajalosandes'
+import {
+    FormTrabPage as FormTrabPageBtg,
+    FormPatrPage as FormPatrPageBtg
+} from './pages/InterestConflicts/components/btg'
+import {FormTrabPage as FormTrabPageSC} from './pages/InterestConflicts/components/santanderConsumer'
+import {FormTrabPage as FormTrabPageFam} from './pages/InterestConflicts/components/famae'
+import {FormKycPage} from './pages/OnBoarding/components'
+import {FormKycPagePar} from './pages/OnBoarding/components/parauco'
+import {FormTrabGenPage as FormTrabPageGen} from './pages/InterestConflicts/components/GenericFormTrab'
+
 
 class App extends Component {
     state = {
@@ -343,65 +368,82 @@ class App extends Component {
                                     <Route path="/monitoreo/eventos" exact
                                            render={() => this.renderComponent(MonitoringPage, 'monitoring')}/>
 
+                                    <Route path="/consulta/:text" exact
+                                           render={() => this.renderComponent(QueryPage, 'query')}/>
+                                    <Route path="/consulta2" exact
+                                           render={() => this.renderComponent(Query2Page, 'query2')}/>
 
-                                    {/*}
-                                <Route path="/consulta2" exact render={ () => this.renderComponent(Query2Page, 'query2') } />
-                                <Route path="/consulta/:text" exact render={ () => this.renderComponent(QueryPage, 'query') } />
-                                <Route path="/masivos" exact render={ () => this.renderComponent(BatchPage, 'batch') } />
-                                <Route path="/quiebras" exact render={ () => this.renderComponent(QuiebrasPage, 'bankruptcy') } />
-                                <Route path="/conflictos-de-interes" exact render={ () => this.renderComponent(ConflictsOfInterestPage, 'conflict') } />
+                                    <Route path="/masivos" exact
+                                           render={() => this.renderComponent(BatchPage, 'batch')}/>
 
+                                    <Route path="/quiebras" exact
+                                           render={() => this.renderComponent(QuiebrasPage, 'bankruptcy')}/>
+                                    <Route path="/conflictos-de-interes" exact
+                                           render={() => this.renderComponent(InterestConflictsPage, 'conflict')}/>
 
-
-
-                                {/* Formularios CDI - SMU */}
-
-                                    {/*}
-                                <Route path="/forms/1/formTrab/:id/:view?" exact render={ () => <FormTrabPageSmu/>} />
-                                <Route path="/forms/1/formProv/:id/:view?" exact render={ () => <FormProvPageSmu/>} />
-                                <Route path="/forms/1/formDir/:id/:view?" exact render={ () => <FormDirPageSmu/>} />
-                                {*/}
-
-                                    {/* Formularios CDI - Caja los Andes
-                                <Route path="/forms/2/formTrab/:id/:view?" exact render={ () => <FormTrabPageCLA/>} />
-                                <Route path="/forms/2/formProv/:id/:view?" exact render={ () => <FormProvPageCLA/>} />
-                                <Route path="/forms/2/formDir/:id/:view?" exact render={ () => <FormDirPageCLA/>} />
-                                */}
-
-                                    {/* Formularios CDI - Nuevo Capital
-                                <Route path="/forms/nuevocapital/formTrab/:id/:view?" exact render={ () => <FormTrabPageNC/>} />
-                                <Route path="/forms/nuevocapital/formProv/:id/:view?" exact render={ () => <FormProvPageNC/>} />
-                                <Route path="/forms/nuevocapital/formDir/:id/:view?" exact render={ () => <FormDirPageNC/>} />
-                                 */}
-
-                                    {/* Formularios CDI - BTG
-                                <Route path="/forms/btgpactual/formTrab/:id/:view?" exact render={ () => <FormTrabPageBtg/>} />
-                                <Route path="/forms/btgpactual/formPatr/:id/:view?" exact render={ () => <FormPatrPageBtg/>} />
-                                */}
-
-                                    {/* Formularios CDI - Santander Consumer
-                                <Route path="/forms/santanderconsumer/formTrab/:id/:view?" exact render={ () => <FormTrabPageSC/>} />
-                                <Route path="/forms/3/formTrab/:id/:view?" exact render={ () => <FormTrabPageFam/>} />
-                                */}
-
-                                    {/* Routa generica para formTrab
-                                <Route path="/forms/:cliente/formTrab/:id/:view?" exact render={ () => <FormTrabPageGen/>} />
-                                <Route path="/forms/:cliente/formFP/:id/:view?" exact render={ () => <FormFPPage/>} />
-                                <Route path="/forms/:cliente/formSoc/:id/:view?" exact render={ () => <FormSocPage/>} />
-                                <Route path="/forms/:cliente/formGift/:id/:view?" exact render={ () => <FormGiftPage/>} />
-                                <Route path="/forms/:cliente/formTravel/:id/:view?" exact render={ () => <FormTravelPage/>} />
-                                <Route path="/forms/:cliente/formValues/:id/:view?" exact render={ () => <FormValuesPage/>} />
+                                    {/*<Route path="/formPepNatural/:id/:view?" exact render={ () => <FormPepNaturalPage/>} />*/}
+                                    <Route path="/portal/:domain" exact render={() => <StakeholderPage/>}/>
 
 
-                                {/* Formularios KYC - OnBoarding
-                                <Route path="/forms/parauco/formKyc/:id/:view?" exact render={ () => <FormKycPagePar/>} />
-                                <Route path="/forms/:client/formKyc/:id/:view?" exact render={ () => <FormKycPage/>} />
-                                {/****************************/}
+                                    {/* Formularios CDI - SMU */}
 
-                                    {/*
-                                <Route path="/formPepNatural/:id/:view?" exact render={ () => <FormPepNaturalPage/>} />
-                                <Route path="/portal/:domain" exact render={ () => <StakeholderPage/>} />
-                                */}
+                                    <Route path="/forms/1/formTrab/:id/:view?" exact render={() => <FormTrabPageSmu/>}/>
+                                    <Route path="/forms/1/formProv/:id/:view?" exact render={() => <FormProvPageSmu/>}/>
+                                    <Route path="/forms/1/formDir/:id/:view?" exact render={() => <FormDirPageSmu/>}/>
+
+                                    /* Formularios CDI - Caja los Andes}
+                                    <Route path="/forms/2/formTrab/:id/:view?" exact render={() => <FormTrabPageCLA/>}/>
+                                    <Route path="/forms/2/formProv/:id/:view?" exact render={() => <FormProvPageCLA/>}/>
+                                    <Route path="/forms/2/formDir/:id/:view?" exact render={() => <FormDirPageCLA/>}/>
+
+
+                                    {/* Formularios CDI - Nuevo Capital*/}
+                                    <Route path="/forms/nuevocapital/formTrab/:id/:view?" exact
+                                           render={() => <FormTrabPageNC/>}/>
+                                    <Route path="/forms/nuevocapital/formProv/:id/:view?" exact
+                                           render={() => <FormProvPageNC/>}/>
+                                    <Route path="/forms/nuevocapital/formDir/:id/:view?" exact
+                                           render={() => <FormDirPageNC/>}/>
+
+
+                                    {/* Formularios CDI - BTG*/}
+                                    <Route path="/forms/btgpactual/formTrab/:id/:view?" exact
+                                           render={() => <FormTrabPageBtg/>}/>
+                                    <Route path="/forms/btgpactual/formPatr/:id/:view?" exact
+                                           render={() => <FormPatrPageBtg/>}/>
+
+
+                                    {/* Formularios CDI - Santander Consumer*/}
+                                    <Route path="/forms/santanderconsumer/formTrab/:id/:view?" exact
+                                           render={() => <FormTrabPageSC/>}/>
+                                    <Route path="/forms/3/formTrab/:id/:view?" exact render={() => <FormTrabPageFam/>}/>
+
+
+                                    {/* Routa generica para formTrab */}
+                                    <Route path="/forms/:cliente/formTrab/:id/:view?" exact
+                                           render={() => <FormTrabPageGen/>}/>
+                                    <Route path="/forms/:cliente/formFP/:id/:view?" exact render={() => <FormFPPage/>}/>
+                                    <Route path="/forms/:cliente/formSoc/:id/:view?" exact
+                                           render={() => <FormSocPage/>}/>
+                                    <Route path="/forms/:cliente/formGift/:id/:view?" exact
+                                           render={() => <FormGiftPage/>}/>
+                                    <Route path="/forms/:cliente/formTravel/:id/:view?" exact
+                                           render={() => <FormTravelPage/>}/>
+                                    <Route path="/forms/:cliente/formValues/:id/:view?" exact
+                                           render={() => <FormValuesPage/>}/>
+
+
+                                    {/* Formularios KYC - OnBoarding*/}
+                                    <Route path="/forms/parauco/formKyc/:id/:view?" exact
+                                           render={() => <FormKycPagePar/>}/>
+                                    <Route path="/forms/:client/formKyc/:id/:view?" exact
+                                           render={() => <FormKycPage/>}/>
+                                    {/****************************/}
+
+                                    <Route path="/formPepNatural/:id/:view?" exact
+                                           render={() => <FormPepNaturalPage/>}/>
+                                    <Route path="/portal/:domain" exact render={() => <StakeholderPage/>}/>
+
 
                                     <Route render={() => <NotFoundPage/>}/>
 

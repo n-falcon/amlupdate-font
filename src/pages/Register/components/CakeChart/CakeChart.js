@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next'
 import {Spin} from 'antd'
 import Plot from "react-plotly.js";
 
-const CakeChart = ({isLoading, firstLoading, colorsCake}) => {
+const CakeChart = ({firstLoading, colorsCake}) => {
     const {t} = useTranslation()
 
     const data = [

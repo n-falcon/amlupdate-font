@@ -1,0 +1,91 @@
+.quiebras {
+  .client-card {
+    background: rgba(0, 0, 0, .02);
+    border-bottom: 1px rgba(0, 0, 0, .1) solid;
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, .025);
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, .025);
+    -moz-box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, .025);
+
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 72px;
+    }
+
+    .section {
+      align-items: center;
+      color: rgba(0, 0, 0, .5);
+      display: flex;
+      float: left;
+      justify-content: center;
+      height: 70px;
+    }
+
+    .client-card-inner {
+      box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, .035);
+      padding: 20px 25px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+      -webkit-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, .035);
+      -moz-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, .035);
+
+      .avatar {
+        .avatar-wrapper {
+          background: rgba(0, 0, 0, .085);
+          border-radius: 25px;
+          box-shadow: inset 0px -5px 3px -5px rgba(0,0,0,0.25);
+          height: 50px;
+          margin-right: 20px;
+          text-align: center;
+          width: 50px;
+          -webkit-box-shadow: inset 0px -5px 3px -5px rgba(0,0,0,0.25);
+          -moz-box-shadow: inset 0px -5px 3px -5px rgba(0,0,0,0.25);
+
+          img {
+            height: inherit;
+          }
+        }
+      }
+
+      .info {
+        justify-content: left;
+        text-align: left !important;
+        width: 250px;
+
+        .info-wrapper {
+          .name {
+            font-weight: 600;
+          }
+
+          .rut {
+            font-size: 0.9em;
+          }
+        }
+      }
+
+      .risk {
+        .risk-wrapper {
+          border-radius: 25px;
+          box-shadow: inset 0px -5px 3px -5px rgba(0,0,0,0.25);
+          font-size: 1.1em;
+          height: 50px;
+          left: 16px;
+          line-height: 50px;
+          margin-right: 20px;
+          position: relative;
+          text-align: center;
+          width: 50px;
+          -webkit-box-shadow: inset 0px -5px 3px -5px rgba(0,0,0,0.25);
+          -moz-box-shadow: inset 0px -5px 3px -5px rgba(0,0,0,0.25);
+        }
+      }
+    }
+
+    .risk-YELLOW, .risk-RED, .risk-BLACK {
+      cursor: pointer;
+    }
+  }
+}

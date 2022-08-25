@@ -1,0 +1,334 @@
+.tab-big-matches {
+	margin-bottom: -20px;
+	position: relative;
+
+	.spinner {
+		box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1) inset;
+		-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1) inset;
+		-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1) inset;
+
+		min-height: 990px;
+		margin-top: 0;
+		position: relative;
+		width: 100%;
+
+		.ant-spin {
+			left: 50%;
+			margin: -10px 0 0 -10px;
+			position: absolute;
+			top: 200px;
+		}
+	}
+
+	.top-bar {
+		height: 40px;
+		padding-left: 14px;
+		padding-top: 14px;
+		position: relative;
+		top: -20px;
+
+		.advanced-search {
+			background-color: transparent;
+			border-bottom: 1px;
+			border-bottom-style: solid;
+			border-bottom-color: transparent;
+			border-radius: 5px;
+			color: rgba(0, 0, 0, .5);
+			cursor: pointer;
+			padding: 5px 10px 5px 0;
+			position: absolute;
+			right: 14px;
+			top: 14px;
+			.anticon:first-child {
+				font-size: 0.8em;
+				margin-left: 10px;
+				margin-top: -3px;
+			}
+
+			.anticon:last-child {
+				font-size: 0.85em;
+			}
+
+			&.on {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: filters-are-open;
+
+				@keyframes filters-are-open {
+					to {
+						background-color: rgba(0, 0, 0, .075);
+						border-bottom-color: rgba(0, 0, 0, .05);
+					}
+				}
+
+				&:hover {
+					background-color: rgba(0, 0, 0, .075);
+					border-bottom: 1px rgba(0, 0, 0, .05) solid;
+				}
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, .075);
+				border-bottom: 1px rgba(0, 0, 0, .05) solid;
+			}
+		}
+	}
+
+	thead {
+		-webkit-box-shadow:0px 3px 6px 0px rgba(0, 0, 0, .1) inset;
+		-moz-box-shadow:0px 3px 6px 0px rgba(0, 0, 0, .1) inset;
+		box-shadow:0px 3px 6px 0px rgba(0, 0, 0, .1) inset;
+
+		th {
+			background: rgba(0, 0, 0, .3);
+			border-radius: 0 !important;
+			color: white;
+			padding: 10px 0 !important;
+			text-indent: 8px;
+		}
+	}
+
+	.ant-table {
+		font-size: 0.9em;
+		color: rgba(0, 0, 0, .6);
+		min-height: 1000px;
+
+		.icon-wrapper {
+			-webkit-box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			-moz-box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+			background: rgba(0, 0, 0, .3);
+			border-radius: 20px;
+			height: 40px;
+			line-height: 40px;
+			width: 40px;
+
+			img {
+				display: block;
+				height: 22px;
+				left: 9px;
+				position: relative;
+				top: 9px;
+			}
+		}
+
+    h3 {
+      font-weight: normal;
+      font-size: 0.9em;
+    }
+
+		.metrics-wrapper {
+			width: 200px;
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					font-size: 0.9em;
+					line-height: 12px;
+					padding: 0 0 6px;
+
+					.bar-wrapper {
+						overflow: hidden;
+
+						span {
+							display: inline-block;
+							float: left;
+							width: 80px !important;
+						}
+
+						.bar {
+							background: rgba(0, 0, 0, .1);
+							border-radius: 6px;
+							float: right;
+							overflow: hidden;
+							width: 100px !important;
+
+							.bar-inner {
+								background: rgba(0, 0, 0, .1);
+								font-size: 1em;
+								height: 12px;
+								text-indent: 3px;
+								width: 70px;
+							}
+						}
+					}
+
+					&:last-child {
+						padding: 0;
+					}
+				}
+			}
+		}
+
+		.edit-action {
+			padding: 5px;
+			width: 70px;
+
+			&:hover {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: grey-fade-in;
+
+				@keyframes grey-fade-in {
+					to {
+						background: rgba(0, 0, 0, .07);
+						border-radius: 5px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		.download-report {
+			padding: 5px;
+
+			&:hover {
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-name: grey-fade-in;
+
+				@keyframes grey-fade-in {
+					to {
+						background: rgba(0, 0, 0, .07);
+						border-radius: 5px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		table {
+			border-radius: 0 !important;
+		}
+	}
+
+	.bottom-bar {
+		background: rgba(0, 0, 0, .3);
+		bottom: 0;
+		box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.25);
+		height: 55px;
+		padding-top: 12px;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		-webkit-box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.25);
+		-moz-box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.25);
+	}
+
+	.ant-pagination {
+		bottom: 10px;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.ant-table-row {
+
+		td {
+		}
+	}
+
+	.filters-wrapper {
+		overflow: hidden;
+		position: relative;
+
+		&.null {
+			height: 0;
+
+			.filters-wrapper-inner {
+				transform: translateY(-200px);
+			}
+		}
+
+		&.show {
+			animation-duration: 0.75s;
+			animation-fill-mode: forwards;
+			animation-name: show-parent;
+			z-index: 800;
+
+			@keyframes show-parent {
+				from {
+					height: 0;
+				}
+
+				to {
+					height: 170px;
+				}
+			}
+
+			.filters-wrapper-inner {
+				animation-duration: 0.75s;
+				animation-fill-mode: forwards;
+				animation-name: show-child;
+
+				@keyframes show-child {
+					from {
+						transform: translateY(-200px);
+					}
+
+					to {
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+
+		&.hide {
+			animation-duration: 0.3s;
+			animation-fill-mode: forwards;
+			animation-name: hide-parent;
+			overflow: hidden;
+			position: relative;
+			z-index: 800;
+
+			@keyframes hide-parent {
+				from {
+					height: 170px;
+				}
+
+				to {
+					height: 0;
+				}
+			}
+
+			.filters-wrapper-inner {
+				animation-duration: 0.3s;
+				animation-fill-mode: forwards;
+				animation-name: hide-child;
+
+				@keyframes hide-child {
+					from {
+						transform: translateY(0);
+					}
+
+					to {
+						transform: translateY(-200px);
+					}
+				}
+			}
+		}
+	}
+
+	h3 {
+		font-size: 1em;
+		color: rgba(0, 0, 0, .7);
+	}
+
+	.matches {
+		-webkit-box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+		-moz-box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+		box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.14);
+		background: rgba(0, 0, 0, .3);
+		border-radius: 20px;
+		line-height: 40px;
+		height: 40px;
+		margin: 0 0 0 15px;
+		text-align: center;
+		width: 40px;
+		color: white;
+	}
+}

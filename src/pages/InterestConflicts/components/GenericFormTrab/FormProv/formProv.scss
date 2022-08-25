@@ -1,0 +1,153 @@
+.site-layout-content {
+  background: rgb(141, 139, 139);
+  padding: 24px;
+  min-height: 280px;
+}
+#components-layout-demo-top .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.form-content.form-validate-messages {
+}
+
+.form-content {
+  &.form-validate-messages {
+     div.has-error div.ant-form-explain {
+       display: none;
+     }
+  }
+
+  .form-form {
+
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+
+
+    .radio-switch{
+      display: block;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .switch-col {
+      .radio-item {
+        margin-left: 40px;
+      }
+    }
+
+    
+    .ant-table-column-title {
+      color: rgba(0, 0, 0, 0.65)
+    }
+
+    .ant-table-wrapper {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+
+    .summary {
+      .introduction-item{
+        margin-bottom: 0px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 200px;
+
+        input {
+          background-color: #fff;
+        }
+
+      }
+    }
+
+    .tooltip-form {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .ant-form-item-label {
+      line-height: 0px;     //separation with input box
+      padding-left: 10px;
+    }
+
+    .ant-form-item {
+      margin-bottom: 12px;
+    }
+
+    .leftLabel{
+      .ant-form-item-label{
+        padding-top: 12px;
+        text-align: left;
+        line-height: 14px;
+      }
+      .ant-form-item{
+        margin-bottom: 0px;
+
+      }
+
+    }
+
+    .topLabel{
+      .ant-form-item-label{
+        line-height: 16px;
+      }
+    }
+
+    .clean-header{
+      margin-bottom: 0px;
+    }
+
+    .submitResponsible{
+      text-align: center;
+    }
+
+    .submitTrabajador{
+      text-align: center;
+    }
+
+
+
+
+    .button-row{
+      padding-bottom:10px ;
+
+    }
+
+    .subheader{
+      background-color: rgba(0,0,0,.2);
+      padding-left: 10px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .content{
+      padding: 0px;
+      &.observaciones {
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .inner-row {
+        padding: 2px;
+      }
+    }
+
+
+    .summary {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: justify;
+      padding: 10px;
+    }
+
+
+  }
+}

@@ -4,7 +4,7 @@ import {Table, Row, Col, Icon, Checkbox, Button, Pagination, Modal, Dropdown, Me
 import moment from 'moment'
 import {getItemsPromise} from '../../promises'
 import {ModalClientCardPage} from '../../components'
-//import {ModalPdfViewer} from '../../../../../ConflictsOfInterest/components'
+//import {ModalPdfViewer} from '../../../../../InterestConflicts/components'
 import personIcon from '../../../../../Query/components/PersonCard/person-icon.png'
 import entityIcon from '../../../../../Query/components/PersonCard/entity-icon.png'
 import { ModalRequest } from './components'

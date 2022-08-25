@@ -4,7 +4,7 @@ import moment from 'moment'
 import { useTranslation } from 'react-i18next'
 import {Row, Col, Input, Button, Icon, Select, Table, Radio, message, Modal, Progress, Divider, Spin } from 'antd'
 import { updateRiskPromise } from '../../promises';
-//import {ModalPdfViewer} from '../../../ConflictsOfInterest/components'
+//import {ModalPdfViewer} from '../../../InterestConflicts/components'
 import { FalsesPositivesBlock } from '../../../AlertManager/components'
 import { getFichaPromise, saveCommentsPromise, getUbosCtrlPromise, savePeriodicityPromise } from '../../promises'
 import { HistoryModal } from '../../../../layouts/Private/components'

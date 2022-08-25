@@ -1,0 +1,40 @@
+.conflicts-of-interest {
+	.item {
+		border-bottom: 1px rgba(0, 0, 0, .075) solid;
+
+		.ant-col {
+			align-items: center;
+			display: flex;
+			height: 80px;
+
+			.col-inner {
+				font-size: 0.85em;
+
+				.circle {
+					background: rgba(0, 0, 0, .15);
+					border-bottom: 2px rgba(0, 0, 0, .1) solid;
+					border-radius: 23px;
+					height: 46px;
+					margin-left: 15px;
+					width: 46px;
+
+					img {
+						display: block;
+						height: 26px;
+						left: 50%;
+						margin-left: -13px;
+						top: 8px;
+						position: relative;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				.col-inner {
+					padding-left: 5px;
+					padding-right: 15px;
+				}
+			}
+		}
+	}
+}
