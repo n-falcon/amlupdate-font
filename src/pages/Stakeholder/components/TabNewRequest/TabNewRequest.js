@@ -1,6 +1,6 @@
 import './TabNewRequest.scss'
 import React, { useState } from 'react'
-import { Col, Row, Button, Modal } from 'antd'
+import { Row, Button} from 'antd'
 import { FormModal } from '../../../../layouts/Private/components'
 
 
@@ -8,8 +8,6 @@ const TabNewRequest = ({ client, currentUser }) => {
 	const [isLoading, setIsLoading] = useState(false)
 	const [typeForm, setTypeForm] = useState(false)
 	const [showForm, setShowForm] = useState(false);
-	// const {t, closeHandler, embeded } = this.props;
-
 
 	const openForm = (type) => {
 		setTypeForm(type);

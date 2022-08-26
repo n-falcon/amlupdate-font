@@ -1,8 +1,8 @@
 import './CakeRisk.scss'
-import React, { useEffect, useState } from 'react'
-import PieChart from 'react-minimal-pie-chart'
+import React, { useState } from 'react'
 import { Switch, Icon } from 'antd'
 import { useTranslation } from 'react-i18next'
+import Plot from "react-plotly.js";
 
 const CakeRisks = ({ isLoading, total, handlerFilterRisk, colors }) => {
   const [filterRisk, setFilterRisk] = useState([])
@@ -46,22 +46,46 @@ const CakeRisks = ({ isLoading, total, handlerFilterRisk, colors }) => {
     handlerFilterRisk(filterRisk)
   }
 
+  const graphGenerator = (graphData) => {
+    const values = graphData.map(x => x.value);
+    const labels = graphData.map(x => x.title);
+    const color =  graphData.map(x => x.color);
+
+    const dataGraph = [{
+      type: "pie",
+      values: values,
+      labels: labels,
+      hoverinfo: "",
+      textposition: "inside",
+      textinfo: 'none',
+      automargin: false,
+      hole: .74,
+      marker: {
+        colors: color
+      },
+    },
+    ]
+    const layoutGraph = {
+      showlegend: false,
+      height: 133,
+      width: 133,
+      margin: {
+        l: 6,
+        r: 6,
+        b: 6,
+        t: 6,
+      },
+    }
+    return (
+        <Plot data={dataGraph} layout={layoutGraph} />
+    )
+  }
+
   return (
     <div className='cake-risks'>
       <div className='cake'>
-        { !isLoading &&
-          <PieChart
-            animate={ true }
-            animationDuration={ 500 }
-            animationEasing="ease-out"
-            cx={ 50 }
-            cy={ 50 }
-            data={ dataChart === null ? data : dataChart }
-            lineWidth={ 25 }
-          />
-        }
-
-        { !isLoading && <div className='totalNum'>{ total }</div> }
+        { !isLoading && graphGenerator(dataChart === null ? data : dataChart)}
+        { !isLoading && <div className='totalNum'>{ total }</div>}
       </div>
       <div className={'risk-block ' + (filterRisk.length === 0 || filterRisk.includes('HIGH') ? 'is-checked' : 'is-not-checked')}>
         <div className='top-bar'>

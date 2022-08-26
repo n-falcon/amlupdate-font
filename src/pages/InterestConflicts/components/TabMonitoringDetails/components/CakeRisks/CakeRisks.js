@@ -48,7 +48,6 @@ const CakeRisks = ({ isLoading, total, handlerFilterRisk, colors }) => {
   }
 
   const graphGenerator = (graphData) => {
-    debugger
     const values = graphData.map(x => x.value);
     const labels = graphData.map(x => x.title);
     const color =  graphData.map(x => x.color);
@@ -87,7 +86,6 @@ const CakeRisks = ({ isLoading, total, handlerFilterRisk, colors }) => {
     <div className='cake-risks'>
       <div className='cake'>
         { !isLoading && graphGenerator(dataChart === null ? data : dataChart)}
-
         { !isLoading && <div className='totalNum'>{ total }</div>}
 
       </div>

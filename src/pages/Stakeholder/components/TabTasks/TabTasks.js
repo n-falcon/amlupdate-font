@@ -1,9 +1,8 @@
 import "./TabTasks.scss";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Icon,
   Pagination,
-  Menu,
   Empty,
 } from "antd";
 import { PortalAlertManager } from "..";
@@ -12,7 +11,7 @@ import moment from "moment";
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { camelizerHelper } from "../../../../helpers";
-import { AdvancedNav,AdvancedTabs } from "../";
+import { AdvancedTabs } from "../";
 
 const TabTask = ({ currentUser, callback, status }) => {
   const [items, setItems] = useState([]);
@@ -22,8 +21,6 @@ const TabTask = ({ currentUser, callback, status }) => {
   const [isItemsLoading, setIsItemsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const { t } = useTranslation();
-  const { SubMenu, Item } = Menu;
-  const [advancedObj, setAdvancedObj] = useState({});
   const [isAdvancedSearchVisible, setIsAdvancedSearchVisible] = useState(null);
   const [filters, setFilters] = useState({});
 

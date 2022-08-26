@@ -28,7 +28,6 @@ const ModalMatchRequest = ({isVisible, onClose, onNewRelease, record, currentUse
 
   const [isClientsLoading, setIsClientsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
-  const [periodicityType, setPeriodicityType] = useState(null);
   const [subject, setSubject] = useState(null);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
@@ -43,7 +42,6 @@ const ModalMatchRequest = ({isVisible, onClose, onNewRelease, record, currentUse
   const [nCategories, setNCategories] = useState(1)
   const [level, setLevel] = useState(1)
   const [levels, setLevels] = useState([])
-//  const [levels, setLevels] = useState(["UBO", "PARENT", "PARENT-UBO"])
   const [periodicity,setPeriodicity] = useState(null)
 
   const limitRecords = 10;
@@ -415,10 +413,6 @@ const ModalMatchRequest = ({isVisible, onClose, onNewRelease, record, currentUse
 
     if(panelId === '1') setSelection1(obj)
     else setSelection2(obj)
-  };
-
-  const handlePeriodicityTypeChange = (e) => {
-    setPeriodicityType(e.target.value);
   };
 
   const saveThis = async () => {

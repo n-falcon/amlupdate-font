@@ -14,7 +14,6 @@ const TabOnboarding = ({currentUser, client}) => {
     const [isLoading, setIsLoading] = useState(false)
 	const [items, setItems] = useState([])
 	const [selectedForm, setSelectedForm] = useState({})
-    const [filters, setFilters] = useState({}) 
 	const [formId, setFormId] = useState (null)
 	const [showForm, setShowForm] = useState(false)
     const { t } = useTranslation()

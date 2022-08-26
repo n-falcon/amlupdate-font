@@ -2,13 +2,11 @@ import './Quiebras.scss'
 import React, { Component } from 'react'
 import { withTranslation } from 'react-i18next'
 import { withRouter } from 'react-router'
-import apiConfig from '../../config/api'
-import { Col, Row, Pagination, Spin, Modal, Button, List, Form, Select, Switch, Icon, notification } from 'antd'
+import {  Pagination, Spin, Modal, Button} from 'antd'
 import { Page, PageBottomBar, PageContent, PageFooter, PageHeader, PageTopBar } from '../../layouts/Private/components'
 import { ClientCard, Content, ContentTopBar, Filters, Sidebar, TableHeaders, ModalRisk } from './components'
 import { ReportService } from '../../services'
 import { getClientsPromise } from './promises'
-import excelFileIcon from './excel-file.png'
 
 class Register extends Component {
   state = {

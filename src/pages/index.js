@@ -1,4 +1,3 @@
-//import Admin from './Admin/Admin'
 import AdminLists from './AdminLists/AdminLists'
 import AdminConsultas from './AdminConsultas/AdminConsultas'
 import AdminRisk from './AdminParams/AdminRisk'
@@ -45,9 +44,6 @@ export const AdminAuthIpsPage = AdminAuthIps
 export const AdminSearchPage = AdminSearch
 export const MonitoringPage = Monitoring
 export const Query2Page = Query2
-
-
-
 export const AdminListsPage = AdminLists
 export const AdminConsultasPage = AdminConsultas
 export const AdminRiskPage = AdminRisk

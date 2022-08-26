@@ -21,13 +21,10 @@ const FormTrab = ({ form, match, formId }) => {
   const [format, setFormat] = useState("html");
 
   const [date, setDate] = useState(0);
-  const dateFormat = "DD/MM/YYYY";
-  const { Option } = Select;
   const [user, setUser] = useState({});
   const [subclienteId, setSubclienteId] = useState("0");
   const [apiForm, setApiForm] = useState(null);
   const [params, setParams] = useState({});
-  const [othersCDIobj, setOthersCDIobj] = useState({});
   const [colLogo, setColLogo] = useState(4);
   const [openContent, setopenContent] = useState(false);
   const [validarRegistros, setValidarRegistros] = useState(false);
@@ -853,10 +850,7 @@ const handleOnChangeRadioButton2 = async (type,field, value) => {
   const arrIndex = hasCollections.findIndex(obj=>obj.type === type)
   arrIndex > -1 ? hasCollections[arrIndex].value=value : hasCollections.push({type:type, value:value})
   let formToUpdate = { ...apiForm, hasCollections: hasCollections };
-  let ret = await saveFormCDItrabPromiseLocal(formToUpdate);
-  // if(!ret.success) {
-  //   setFieldsValue({[field]: ret.form[field]})
-  // }
+
 };
 
 const getRadioButtonValue = (type) => {
@@ -1098,11 +1092,6 @@ const handleOnAddAttributes = (objState,type,sectionId) => {
   };
 
 
-
-  const handleOnChangeFieldMalla = (field, value) => {
-    setMalla({ ...malla, [field]: { ...malla[field], val: value } });
-  };
-
   const handleOnAddMalla = async () => {
     setIsValidate(true);
 
@@ -1199,9 +1188,7 @@ const handleOnAddAttributes = (objState,type,sectionId) => {
     };
   };
 
-  const handleOnChangeFieldOutdoor = (field, value) => {
-    setOutdoor({ ...outdoor, [field]: { ...outdoor[field], val: value } });
-  };
+
 
   const handleOnAddOutdoor = () => {
     setIsValidate(true);
@@ -1227,13 +1214,6 @@ const handleOnAddAttributes = (objState,type,sectionId) => {
 
       saveFormCDItrabPromiseLocal(formToUpdate);
     };
-  };
-
-  const handleOnChangeFieldCompetencia = (field, value) => {
-    setCompetencia({
-      ...competencia,
-      [field]: { ...competencia[field], val: value },
-    });
   };
 
   const handleOnAddCompetencia = () => {
@@ -1264,12 +1244,7 @@ const handleOnAddAttributes = (objState,type,sectionId) => {
     };
   };
 
-  const handleOnChangeFieldRelationParentesco = (field, value) => {
-    setRelationParentesco({
-      ...relationParentesco,
-      [field]: { ...relationParentesco[field], val: value },
-    });
-  };
+
 
   const handleOnAddRelationParentesco = () => {
     setIsValidate(true);

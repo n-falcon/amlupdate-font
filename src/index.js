@@ -9,7 +9,6 @@ import i18nextConfig from './config/i18next'
 import {message, Icon, Tooltip} from 'antd'
 import {globalContext} from './contexts'
 
-
 /* Pages */
 import {
     LoginPage,
@@ -53,7 +52,6 @@ import {Loading, ModalChangePassword} from './layouts/Private/components'
 import {LayoutPrivate, LayoutPublic} from './layouts'
 
 /*Formularios */
-
 
 import {
     FormFPPage,
@@ -367,34 +365,37 @@ class App extends Component {
                                            render={() => this.renderComponent(MonitoringPage, 'monitoring')}/>
                                     <Route path="/monitoreo/eventos" exact
                                            render={() => this.renderComponent(MonitoringPage, 'monitoring')}/>
-
                                     <Route path="/consulta/:text" exact
                                            render={() => this.renderComponent(QueryPage, 'query')}/>
                                     <Route path="/consulta2" exact
                                            render={() => this.renderComponent(Query2Page, 'query2')}/>
-
                                     <Route path="/masivos" exact
                                            render={() => this.renderComponent(BatchPage, 'batch')}/>
-
                                     <Route path="/quiebras" exact
                                            render={() => this.renderComponent(QuiebrasPage, 'bankruptcy')}/>
                                     <Route path="/conflictos-de-interes" exact
                                            render={() => this.renderComponent(InterestConflictsPage, 'conflict')}/>
 
-                                    {/*<Route path="/formPepNatural/:id/:view?" exact render={ () => <FormPepNaturalPage/>} />*/}
+                                    <Route path="/formPepNatural/:id/:view?" exact render={ () => <FormPepNaturalPage/>} />
                                     <Route path="/portal/:domain" exact render={() => <StakeholderPage/>}/>
 
 
                                     {/* Formularios CDI - SMU */}
 
-                                    <Route path="/forms/1/formTrab/:id/:view?" exact render={() => <FormTrabPageSmu/>}/>
-                                    <Route path="/forms/1/formProv/:id/:view?" exact render={() => <FormProvPageSmu/>}/>
-                                    <Route path="/forms/1/formDir/:id/:view?" exact render={() => <FormDirPageSmu/>}/>
+                                    <Route path="/forms/1/formTrab/:id/:view?" exact
+                                           render={() => <FormTrabPageSmu/>}/>
+                                    <Route path="/forms/1/formProv/:id/:view?" exact
+                                           render={() => <FormProvPageSmu/>}/>
+                                    <Route path="/forms/1/formDir/:id/:view?" exact
+                                           render={() => <FormDirPageSmu/>}/>
 
                                     /* Formularios CDI - Caja los Andes}
-                                    <Route path="/forms/2/formTrab/:id/:view?" exact render={() => <FormTrabPageCLA/>}/>
-                                    <Route path="/forms/2/formProv/:id/:view?" exact render={() => <FormProvPageCLA/>}/>
-                                    <Route path="/forms/2/formDir/:id/:view?" exact render={() => <FormDirPageCLA/>}/>
+                                    <Route path="/forms/2/formTrab/:id/:view?" exact
+                                           render={() => <FormTrabPageCLA/>}/>
+                                    <Route path="/forms/2/formProv/:id/:view?" exact
+                                           render={() => <FormProvPageCLA/>}/>
+                                    <Route path="/forms/2/formDir/:id/:view?" exact
+                                           render={() => <FormDirPageCLA/>}/>
 
 
                                     {/* Formularios CDI - Nuevo Capital*/}
@@ -438,12 +439,11 @@ class App extends Component {
                                            render={() => <FormKycPagePar/>}/>
                                     <Route path="/forms/:client/formKyc/:id/:view?" exact
                                            render={() => <FormKycPage/>}/>
-                                    {/****************************/}
 
                                     <Route path="/formPepNatural/:id/:view?" exact
                                            render={() => <FormPepNaturalPage/>}/>
-                                    <Route path="/portal/:domain" exact render={() => <StakeholderPage/>}/>
-
+                                    <Route path="/portal/:domain" exact
+                                           render={() => <StakeholderPage/>}/>
 
                                     <Route render={() => <NotFoundPage/>}/>
 

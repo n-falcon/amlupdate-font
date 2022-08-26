@@ -1,10 +1,6 @@
 import "./Sidebar.scss";
 import React from "react";
 import { Col, Icon, Badge } from "antd";
-import iconMessages from "./icon-message.png";
-import iconNetwork from "./icon-network.png";
-import iconAlert from "./icon-alert.png";
-import iconSettings from "./icon-settings.png";
 import { useTranslation } from 'react-i18next';
 
 const Sidebar = ({ client, activeTab, onTabChange, edoTasks }) => {

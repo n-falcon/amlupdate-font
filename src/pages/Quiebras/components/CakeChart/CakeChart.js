@@ -2,9 +2,9 @@ import './CakeChart.scss'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Spin } from 'antd'
-import PieChart from 'react-minimal-pie-chart'
+import Plot from "react-plotly.js"
 
-export default ({ isLoading, firstLoading, totalNum, riskCritical, riskHigh, riskMedium, riskLow, riskNa }) => {
+export default ({  firstLoading, totalNum, riskCritical, riskHigh, riskMedium, riskLow, riskNa }) => {
   const { t } = useTranslation()
 
   const data = [
@@ -15,6 +15,42 @@ export default ({ isLoading, firstLoading, totalNum, riskCritical, riskHigh, ris
     { title: t('messages.aml.notProcessed'), value: riskNa, color: '#999' }
   ]
 
+  const graphGenerator = (graphData) => {
+    const values = graphData.map(x => x.value);
+    const labels = graphData.map(x => x.title);
+    const color =  graphData.map(x => x.color);
+
+    const dataGraph = [{
+      type: "pie",
+      values: values,
+      labels: labels,
+      hoverinfo: "",
+      textposition: "inside",
+      textinfo: 'none',
+      automargin: false,
+      hole: .74,
+      marker: {
+        colors: color
+      },
+    },
+    ]
+    const layoutGraph = {
+      showlegend: false,
+      height: 133,
+      width: 133,
+      margin: {
+        l: 6,
+        r: 6,
+        b: 6,
+        t: 6,
+      },
+    }
+    return (
+        <Plot data={dataGraph} layout={layoutGraph} />
+    )
+  }
+
+
   return (
     <div className="cake">
       { firstLoading ?
@@ -23,16 +59,7 @@ export default ({ isLoading, firstLoading, totalNum, riskCritical, riskHigh, ris
         </div>
         :
         <>
-          <PieChart
-            className={ isLoading ? 'is-loading' : '' }
-            animate={ true }
-            animationDuration={ 500 }
-            animationEasing="ease-out"
-            cx={ 50 }
-            cy={ 50 }
-            data={ data }
-            lineWidth={ 25 }
-          />
+          {graphGenerator(data)}
           <span className="results-number">{ totalNum }</span>
           <span className="results-label">{ t('messages.aml.results') }</span>
         </>

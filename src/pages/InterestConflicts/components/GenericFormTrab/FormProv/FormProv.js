@@ -11,12 +11,11 @@ import { validateRutHelper, validateCompanyRutHelper, } from "../../../../../hel
 
 const FormProv = ({ form, match, formId }) => {
   const { t } = useTranslation();
-  const { getFieldDecorator, validateFields, setFields, getFieldsError, setFieldsValue, getFieldError } = form;
+  const { getFieldDecorator, validateFields, setFields, getFieldsError, setFieldsValue } = form;
   const [isValidate, setIsValidate] = useState(true);
   const [isLoading, setIsloading] = useState(false);
 
   const [date, setDate] = useState(0);
-  const dateFormat = "DD/MM/YYYY";
   const { Option } = Select;
   const [user, setUser] = useState({});
   const [subclienteId, setSubclienteId] = useState("0");
@@ -1525,12 +1524,6 @@ const handleOnAddAttributes = (objState,type,sectionId) => {
     cb();
   };
 
-  const radioStyle = {
-    display: "block",
-    height: "30px",
-    lineHeight: "30px",
-  };
-
   return (
     <FormLayout
       currentUser={{ userId: user.id, subclienteId }}
@@ -2467,7 +2460,7 @@ const handleOnAddAttributes = (objState,type,sectionId) => {
                                   })}
                                   {renderFormItemTable({
                                     section: relationParentesco.relationParentescoRut,
-                                    validator: docValidator( relationParentesco .relationParentescoTipoDoc.val )
+                                    validator: docValidator(relationParentesco .relationParentescoTipoDoc.val )
                                   })}
                                   {renderFormItemTable({
                                     section: relationParentesco.relationParentescoPosition,
@@ -2528,7 +2521,7 @@ const handleOnAddAttributes = (objState,type,sectionId) => {
                                   })}
                                   {renderFormItemTable({
                                     section: relationParentesco.relationParentescoRutTrab,
-                                    validator: docValidator( relationParentesco .relationParentescoTipoDocTrab.val )
+                                    validator: docValidator(relationParentesco .relationParentescoTipoDocTrab.val )
                                   })}
                                 </Row>
 
