@@ -2,7 +2,7 @@ import './AdminLogBases.scss'
 import React from 'react'
 import { withTranslation } from 'react-i18next'
 import {  getIndicesPromise,getUpdateIndexesPromise } from '../../promises'
-import { Button, Modal, Table, Spin } from 'antd'
+import { Button, Icon, Modal, notification, Popconfirm, Table, Tooltip, Spin } from 'antd'
 
 import moment from "moment";
 
@@ -21,7 +21,6 @@ class AdminLogBases extends React.Component {
   }
 
   async componentDidMount() {
-    debugger
     const indices = await getIndicesPromise()
     const filteredBases = indices.filter(index=>index.type ==="PFA" || index.type ==="SOC" || index.type ==="AME")
 
@@ -44,7 +43,7 @@ class AdminLogBases extends React.Component {
 
 
   render() {
-    const { t } = this.props
+    const { currentUser, t } = this.props
 
     const tableColumns = [
       { title: t('messages.aml.baseName'), dataIndex: 'description' },
