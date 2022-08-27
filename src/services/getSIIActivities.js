@@ -1,7 +1,7 @@
 import apiConfig from '../config/api'
 import { apiRequestorHelper } from '../helpers'
 
-const getSiiActivities = {
+export default {
   getSIIActivities: () => {
     return apiRequestorHelper({
       url: apiConfig.url + '/public/getAllActecosSII',
@@ -9,4 +9,3 @@ const getSiiActivities = {
     })
   },
 }
-export default getSiiActivities

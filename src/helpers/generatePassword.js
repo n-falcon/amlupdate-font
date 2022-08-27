@@ -51,7 +51,6 @@ export default (
         }
     }
 
-    //Takes a set of chars and returns one at random
     const randomFromCharSet = (chars) => {
         const random = Math.floor(Math.random() * chars.length);
         return chars[random];
@@ -61,19 +60,16 @@ export default (
         return Math.floor(Math.random() * 9);
     }
 
-    // Generate a random lowercase char
     const lowerCase = () => {
         const chars = charSets.lower;
         return randomFromCharSet(chars);
     }
 
-    // Generate a random uppercase char
     const upperCase= () => {
         const chars = charSets.upper;
         return randomFromCharSet(chars);
     }
 
-    // Generate a random special char
     const symbolCase= () => {
         const chars = charSets.special;
         return randomFromCharSet(chars);

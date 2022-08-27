@@ -1,4 +1,4 @@
-const sessionStorage = {
+export default {
   create: (key, value) => {
     return window.sessionStorage.setItem(key, value)
   },
@@ -15,4 +15,3 @@ const sessionStorage = {
     return window.sessionStorage.removeItem(key)
   }
 }
-export default sessionStorage

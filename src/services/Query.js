@@ -1,7 +1,7 @@
 import apiConfig from '../config/api'
 import { apiRequestorHelper } from '../helpers'
 
-const query = {
+export default {
   create: (query, subclienteId, resultsPerPage, language, type = undefined, typeSearch = undefined) => {
     return apiRequestorHelper({
       url: apiConfig.url + '/search',
@@ -29,5 +29,3 @@ const query = {
     })
   }
 }
-
-export default query

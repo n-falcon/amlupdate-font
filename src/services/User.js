@@ -1,7 +1,7 @@
 import apiConfig from '../config/api'
 import { apiRequestorHelper } from '../helpers'
 
-const user = {
+export default {
   read: () => {
     return apiRequestorHelper({
       url: apiConfig.url + '/currentUser',
@@ -27,5 +27,3 @@ const user = {
     })
   }
 }
-
-export default user

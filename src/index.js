@@ -1,6 +1,6 @@
+import { createRoot } from 'react-dom/client';
 import 'antd/dist/antd.css'
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {I18nextProvider} from 'react-i18next'
 import moment from 'moment'
@@ -465,4 +465,8 @@ class App extends Component {
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'))
+const container = document.getElementById('app');
+const root = createRoot(container);
+root.render(<App/>);
+
+
