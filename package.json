@@ -10,7 +10,6 @@
     "i18next": "^21.8.14",
     "i18next-browser-languagedetector": "^6.1.4",
     "moment": "^2.29.4",
-    "mutationobserver-shim": "^0.3.7",
     "plotly.js": "^1.56.0",
     "react": "^18.2.0",
     "react-animate-height": "^3.0.4",
