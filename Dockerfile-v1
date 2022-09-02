@@ -1,0 +1,9 @@
+FROM openjdk:11
+MAINTAINER: blackdev.cl
+ARG HOME=/home/gesintel
+
+RUN mkdir -p ${HOME}/app
+WORKDIR ${HOME}/app
+
+COPY target/*jar ${HOME}/app/app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]

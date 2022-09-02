@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    image: 'msarchetypehexagonal:latest'
+    build:
+      context: .
+    container_name: blackdev-app
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/customer
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+      - SPRING_JPA_SHOW_SQL=true
+
+    ports:
+      - "8080:8080"
+
+  db:
+    image: 'postgres:latest'
+    container_name: blackdev-db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=customer
+    ports:
+      - "5432:5432"

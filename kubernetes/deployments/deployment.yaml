@@ -1,0 +1,68 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: _app_name_
+  namespace: _namespace_
+  name: _app_name_
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: _app_name_
+  template:
+    metadata:
+      labels:
+        app: _app_name_
+    spec:
+      containers:
+      - image: _uri_ecr_/_app_name_:_tag_
+        command: ["/bin/sh","-c"]
+        args: ["java -jar -Duser.timezone='America/Santiago' /home/coopeuch/app/app.jar --spring.config.location=/home/coopeuch/app/application.yml"]
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 240
+          periodSeconds: 20
+          successThreshold: 1
+          tcpSocket:
+            port: _port_
+          timeoutSeconds: 1
+        name: _app_name_
+        ports:
+        - containerPort: _port_
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 6
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          successThreshold: 1
+          tcpSocket:
+            port: _port_
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: _lcp_
+            memory: _lmm_
+          requests:
+            cpu: _rcp_
+            memory: _rmm_
+        securityContext:
+          capabilities:
+            drop:
+            - ALL
+          runAsUser: 100
+          allowPrivilegeEscalation: false
+        volumeMounts:
+        - mountPath: /home/coopeuch/app/application.yml
+          name: conf-volumen
+          subPath: application.yml
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+      - secret:
+          items:
+          - key: application.yml
+            path: application.yml
+          secretName: _app_name_
+        name: conf-volumen
