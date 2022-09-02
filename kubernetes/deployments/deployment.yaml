@@ -18,7 +18,7 @@ spec:
       containers:
       - image: _uri_ecr_/_app_name_:_tag_
         command: ["/bin/sh","-c"]
-        args: ["java -jar -Duser.timezone='America/Santiago' /home/coopeuch/app/app.jar --spring.config.location=/home/coopeuch/app/application.yml"]
+        args: ["java -jar -Duser.timezone='America/Santiago' /home/gesintel/app/app.jar --spring.config.location=/home/gesintel/app/application.yml"]
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -54,7 +54,7 @@ spec:
           runAsUser: 100
           allowPrivilegeEscalation: false
         volumeMounts:
-        - mountPath: /home/coopeuch/app/application.yml
+        - mountPath: /home/gesintel/app/application.yml
           name: conf-volumen
           subPath: application.yml
       dnsPolicy: ClusterFirst
