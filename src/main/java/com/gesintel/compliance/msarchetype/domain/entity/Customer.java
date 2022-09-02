@@ -1,4 +1,4 @@
-package com.gesintel.complience.msarchetype.domain.entity;
+package com.gesintel.compliance.msarchetype.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

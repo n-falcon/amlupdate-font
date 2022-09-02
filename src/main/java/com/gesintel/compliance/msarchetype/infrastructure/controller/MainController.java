@@ -1,9 +1,9 @@
-package com.gesintel.complience.msarchetype.infrastructure.controller;
+package com.gesintel.compliance.msarchetype.infrastructure.controller;
 
-import com.gesintel.complience.msarchetype.application.contracts.input.IMainController;
-import com.gesintel.complience.msarchetype.application.contracts.interaction.ICustomerService;
-import com.gesintel.complience.msarchetype.application.dto.out.CustomerResume;
-import com.gesintel.complience.msarchetype.infrastructureborder.GlobalSetting;
+import com.gesintel.compliance.msarchetype.application.dto.out.CustomerResume;
+import com.gesintel.compliance.msarchetype.application.contracts.input.IMainController;
+import com.gesintel.compliance.msarchetype.application.contracts.interaction.ICustomerService;
+import com.gesintel.compliance.msarchetype.infrastructureborder.GlobalSetting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

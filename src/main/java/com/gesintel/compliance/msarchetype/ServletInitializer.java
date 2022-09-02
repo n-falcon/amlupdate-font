@@ -1,4 +1,4 @@
-package com.gesintel.complience.msarchetype;
+package com.gesintel.compliance.msarchetype;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

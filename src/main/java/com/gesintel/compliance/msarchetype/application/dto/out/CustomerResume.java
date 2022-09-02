@@ -1,4 +1,4 @@
-package com.gesintel.complience.msarchetype.application.dto.out;
+package com.gesintel.compliance.msarchetype.application.dto.out;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

@@ -1,10 +1,10 @@
-package com.gesintel.complience.msarchetype.application.service;
+package com.gesintel.compliance.msarchetype.application.service;
 
-import com.gesintel.complience.msarchetype.application.ApplicationException;
-import com.gesintel.complience.msarchetype.application.contracts.interaction.ICustomerService;
-import com.gesintel.complience.msarchetype.application.contracts.output.repository.db.ICustomerRepository;
-import com.gesintel.complience.msarchetype.application.dto.out.CustomerResume;
-import com.gesintel.complience.msarchetype.domain.entity.Customer;
+import com.gesintel.compliance.msarchetype.application.ApplicationException;
+import com.gesintel.compliance.msarchetype.application.dto.out.CustomerResume;
+import com.gesintel.compliance.msarchetype.domain.entity.Customer;
+import com.gesintel.compliance.msarchetype.application.contracts.interaction.ICustomerService;
+import com.gesintel.compliance.msarchetype.application.contracts.output.repository.db.ICustomerRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

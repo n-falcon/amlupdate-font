@@ -1,4 +1,4 @@
-package com.gesintel.complience.msarchetype;
+package com.gesintel.compliance.msarchetype;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.gesintel.complience.msarchetype.infrastructureborder;
+package com.gesintel.compliance.msarchetype.infrastructureborder;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;

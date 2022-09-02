@@ -1,4 +1,4 @@
-package com.gesintel.complience.msarchetype.application;
+package com.gesintel.compliance.msarchetype.application;
 
 import lombok.Getter;
 import lombok.Setter;
